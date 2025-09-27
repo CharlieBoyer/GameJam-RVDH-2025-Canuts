@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5045285686d14914b60b77f18da7cc11, type: 3}
-  m_Name: "D\xE9shonneur_B"
+  m_Name: Dishonor_A
   m_EditorClassIdentifier: 
-  _name: "Vous devez penser aux cons\xE9quences"
+  _name: "En ne nous payant pas les agneaux perdus, Renier agit en marchand plus
+    qu\u2019en chevalier. Il entache l\u2019honneur des Franjs."
   _convictionValue: 1
   _category: 3
-  _targets: -1
+  _targets: 58

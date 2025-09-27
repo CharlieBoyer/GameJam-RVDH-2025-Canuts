@@ -300,6 +300,22 @@ PrefabInstance:
       propertyPath: _refID
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._threat
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._dishonor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._diplomacy
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._injustice
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2695054611103486673, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: m_Name
       value: P_Game_Judge_E
@@ -490,15 +506,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: _sensibilities._attack
-      value: 0.5
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._threat
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: _sensibilities._diplomacy
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: _sensibilities._injustice
-      value: -2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2695054611103486673, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: m_Name
@@ -1557,6 +1577,18 @@ PrefabInstance:
       propertyPath: _refID
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._dishonor
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._diplomacy
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._injustice
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2695054611103486673, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: m_Name
       value: P_Game_Judge_D
@@ -1630,6 +1662,14 @@ PrefabInstance:
     - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: _refID
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._threat
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._diplomacy
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2695054611103486673, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: m_Name
@@ -2000,6 +2040,18 @@ PrefabInstance:
       propertyPath: _refID
       value: 32
       objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._attack
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._threat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._dishonor
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2695054611103486673, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: m_Name
       value: P_Game_Judge_F
@@ -2073,6 +2125,18 @@ PrefabInstance:
     - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: _refID
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._attack
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._threat
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1699990260801444004, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: _sensibilities._dishonor
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2695054611103486673, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: m_Name

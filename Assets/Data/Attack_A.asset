@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5045285686d14914b60b77f18da7cc11, type: 3}
-  m_Name: "D\xE9shonneur_A"
+  m_Name: Attack_A
   m_EditorClassIdentifier: 
-  _name: "Vous n'\xEAtes pas digne d'un Seigneur"
-  _convictionValue: 2
-  _category: 3
-  _targets: -1
+  _name: "Cet homme Renier n\u2019a pas de vaillance. Il conquiert des brebis mais
+    il n\u2019a su par le pass\xE9 d\xE9fendre ni son fief ni \xE9pouse."
+  _convictionValue: 1
+  _category: 2
+  _targets: 50
