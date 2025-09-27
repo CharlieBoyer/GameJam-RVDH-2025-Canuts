@@ -1,10 +1,9 @@
-using System;
-using UnityEngine;
-using UnityEngine.UI;
 using Code.Scripts.Singleton;
 using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
 
-namespace Code.Script.UI
+namespace Code.Scripts.UI
 {
     public class MainMenu : MonoBehaviour
     {
