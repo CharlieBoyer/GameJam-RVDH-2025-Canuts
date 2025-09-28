@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85d464b39230d8a43bb791acb21909a5, type: 3}
-  m_Name: Dialogue2
+  m_Name: Dialogue4
   m_EditorClassIdentifier: 
-  characterName: "Ous\xE2ma"
+  characterName: Renier de Banyas
   dialogueSentences:
-  - "Les brebis \xE9taient enceintes et les agneaux ont p\xE9ri. La perte nous demeure."
-  pos: 0
-  characterSprite: {fileID: 21300000, guid: 23aefd01dc46e2541944da202037ceac, type: 3}
+  - "Piti\xE9 seigneur Ous\xE2ma, cette somme je ne l'ai pas ! Sois grand et g\xE9n\xE9reux
+    et accorde-moi ta piti\xE9 !"
+  pos: 1
+  characterSprite: {fileID: 21300000, guid: 05251abb9d433334abb1e13dc04d851a, type: 3}

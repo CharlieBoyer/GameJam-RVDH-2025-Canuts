@@ -10,14 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 85d464b39230d8a43bb791acb21909a5, type: 3}
-  m_Name: Dialogue2
+  m_Name: Dialogue1
   m_EditorClassIdentifier: 
-  characterName: Renier
+  characterName: Renier de Banyas
   dialogueSentences:
-  - Renierrrrrrrr
-  - 'Renierrrrrr
-
-'
-  - Renierrrrrrr
+  - "Vil sarrazin, que viens-tu m'\xE9corcher les oreilles avec tes viles et vaines
+    plaintes !"
   pos: 1
-  characterSprite: {fileID: 21300000, guid: b2eab6710342ef843931972dbc043ae8, type: 3}
+  characterSprite: {fileID: 21300000, guid: 59947d977ef4dad468175b7e47e5c502, type: 3}
