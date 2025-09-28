@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Code.Scripts.Entities;
 using Code.Scripts.SO;
 using Code.Scripts.Types;
+using Code.Scripts.UI;
 using Code.Scripts.Utils;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -16,10 +17,11 @@ namespace Code.Scripts.Singleton
         [SerializeField] private float _roundDuration = 30f;
         [SerializeField] [Range(1, 5)] private int _maxPlayerChoices = 3;
         [SerializeField] private int _judgesMaxConviction;
+        [SerializeField] private int _judgesConvincedThreshold;
         [SerializeField] private float _delayBetweenActions = 3f;
 
         [Header("Trial References")]
-        [SerializeField] private GameTimer
+        [SerializeField] private GameTimer _gameTimer;
         [SerializeField] private GameObject _choicePrefab;
         [SerializeField] private List<PlayerChoiceSO> _choicePool = new ();
         [SerializeField] private RectTransform _playerChoicePanel;
@@ -32,18 +34,80 @@ namespace Code.Scripts.Singleton
         // Events
         public Action<PlayerChoiceSO> OnPlayerAction;
 
-        // Trial
-        private float _timer = 0f;
+        // ----- //
 
         private void Awake()
         {
             Judge.InitializeJudges();
         }
 
+        private void OnEnable()
+        {
+            OnPlayerAction += PrepareNextAction;
+            _gameTimer.OnGameTimerEnd += EndGameSequence;
+        }
+
+        private void OnDisable()
+        {
+            OnPlayerAction -= PrepareNextAction;
+        }
+
+        private void Update()
+        {
+            _gameTimer.Tick();
+        }
+
+        // ----- //
+
         private void Start()
         {
             // Show Start text
 
+            _gameTimer.Begin(_roundDuration);
+
+            RefreshPlayerChoices();
+        }
+
+        private void EndGameSequence()
+        {
+            if (IsJudgesConvinced())
+            {
+                // Play victory sound
+            }
+            else
+            {
+                // Play loss sound
+            }
+
+            // TransitionToNarrativeMode()
+        }
+
+        // ----- //
+
+        private bool IsJudgesConvinced()
+        {
+            int totalJudges = Judge.Instances.Length;
+            int convincedJudge = 0;
+
+            foreach (Judge judge in Judge.Instances)
+            {
+                if (judge.Conviction > _judgesConvincedThreshold)
+                    convincedJudge++;
+            }
+
+            return convincedJudge >= Mathf.CeilToInt(totalJudges / 2f);
+        }
+
+        private void PrepareNextAction(PlayerChoiceSO discard)
+        {
+            StartCoroutine(PrepareNextActionCoroutine());
+        }
+
+        private IEnumerator PrepareNextActionCoroutine()
+        {
+            CleanupActionWheel();
+
+            yield return new WaitForSeconds(_delayBetweenActions);
 
             RefreshPlayerChoices();
         }
@@ -64,7 +128,7 @@ namespace Code.Scripts.Singleton
 
         private void CleanupActionWheel()
         {
-            foreach (Transform children in transform)
+            foreach (Transform children in _playerChoicePanel.transform)
             {
                 Destroy(children.gameObject);
             }
@@ -87,20 +151,6 @@ namespace Code.Scripts.Singleton
             return so;
         }
 
-        // ----- //
 
-        private void PrepareNextAction()
-        {
-            StartCoroutine(PrepareNextActionCoroutine());
-        }
-
-        private IEnumerator PrepareNextActionCoroutine()
-        {
-            CleanupActionWheel();
-
-            yield return new WaitForSeconds(_delayBetweenActions);
-
-            RefreshPlayerChoices();
-        }
     }
 }
