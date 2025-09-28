@@ -667,6 +667,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Game_PlayerChoice_C
       objectReference: {fileID: 0}
+    - target: {fileID: 2399881005988558098, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399881005988558098, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bd08dc8ef692a11409047eb2ff73ae55, type: 3}
     - target: {fileID: 4328372359223699339, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -745,6 +753,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4328372359223699339, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970779599432486873, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cf98227398a4e19409c7aa488a5a3d35, type: 2}
+    - target: {fileID: 4970779599432486873, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6874099965409012653, guid: cf98227398a4e19409c7aa488a5a3d35, type: 2}
+    - target: {fileID: 4970779599432486873, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -842,6 +862,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Game_PlayerChoice_A
       objectReference: {fileID: 0}
+    - target: {fileID: 2399881005988558098, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399881005988558098, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1191ac062c5846e488ed319b7f4221ab, type: 3}
     - target: {fileID: 4328372359223699339, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -920,6 +948,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4328372359223699339, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970779599432486873, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cf98227398a4e19409c7aa488a5a3d35, type: 2}
+    - target: {fileID: 4970779599432486873, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6874099965409012653, guid: cf98227398a4e19409c7aa488a5a3d35, type: 2}
+    - target: {fileID: 4970779599432486873, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -939,6 +979,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Game_PlayerChoice_B
       objectReference: {fileID: 0}
+    - target: {fileID: 2399881005988558098, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2399881005988558098, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b0ac49a0b32712d429711293031dc0ef, type: 3}
     - target: {fileID: 4328372359223699339, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1017,6 +1065,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4328372359223699339, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4970779599432486873, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: cf98227398a4e19409c7aa488a5a3d35, type: 2}
+    - target: {fileID: 4970779599432486873, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 6874099965409012653, guid: cf98227398a4e19409c7aa488a5a3d35, type: 2}
+    - target: {fileID: 4970779599432486873, guid: ea8ff27e263464a4b848a237d79004bf, type: 3}
+      propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
