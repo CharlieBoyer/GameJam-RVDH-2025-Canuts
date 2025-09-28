@@ -1,3 +1,4 @@
+using Code.Scripts.Audio;
 using Code.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -25,7 +26,7 @@ namespace Code.Scripts.Singleton
 
         [Header("Ambient Audio Sources")]
         [SerializeField] private AudioSource _musicAudioSource;
-        [SerializeField] private AudioSource _SFXAudioSource;
+        [SerializeField] private AudioSource _sfxAudioSource;
 
         private static readonly string MasterVolumeParameter = "VolumeMaster";
         private static readonly string AmbientVolumeParameter = "VolumeAmbient";
@@ -39,9 +40,7 @@ namespace Code.Scripts.Singleton
                 _masterVolume = value;
                 UpdateVolume(MasterVolumeParameter, value);
             }
-        }      
-        
-        
+        }
 
         private float _ambientVolume;
         public float AmbientVolume {
@@ -96,7 +95,6 @@ namespace Code.Scripts.Singleton
                 _sfxVolumeMuted = value;
             }
         }
-        
 
         private void Awake()
         {
@@ -116,14 +114,14 @@ namespace Code.Scripts.Singleton
           /*  float decibels = -80 * (1 - Mathf.Clamp(value, 0, 1));
 
             _mixerSystem.SetFloat(mixerParameter, decibels);*/
-          
+
             // Clamp l'entrée entre un seuil minimum très faible (mais non nul) et 1
             float clampedValue = Mathf.Clamp(value, 0.0001f, 1f);
             // Converti en décibels : 0 dB = volume max, -80 dB = quasi silence
             float decibels = Mathf.Log10(clampedValue) * 20f;
 
             _mixerSystem.SetFloat(mixerParameter, decibels);
-            
+
         }
 
         /// <summary>
@@ -148,9 +146,9 @@ namespace Code.Scripts.Singleton
             _musicAudioSource.Play();
         }
 
-        public void PlaySFX(AudioClip SFX)
+        public void PlaySFX(AudioClip sfx)
         {
-            _SFXAudioSource.PlayOneShot(SFX);
+            _sfxAudioSource.PlayOneShot(sfx);
         }
 
     }
