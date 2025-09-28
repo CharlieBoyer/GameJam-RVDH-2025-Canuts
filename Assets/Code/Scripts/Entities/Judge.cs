@@ -25,13 +25,13 @@ namespace Code.Scripts.Entities
         [SerializeField] private float _convictionGaugeAnimDuration;
 
         private int _currentConviction;
-        private int Conviction
+        public int Conviction
         {
             get => _currentConviction;
 
-            set
+            private set
             {
-                _currentConviction = Mathf.FloorToInt(value);
+                _currentConviction = Mathf.Clamp(value, 0, 10);
                 _convictionGauge.DOValue(_currentConviction, _convictionGaugeAnimDuration);
             }
         }

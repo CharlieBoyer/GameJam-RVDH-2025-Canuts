@@ -16,7 +16,6 @@ namespace Code.Scripts.Singleton
         [SerializeField] [Range(0, 1)] private float _initialMasterVolume = 0.5f;
         [SerializeField] [Range(0, 1)] private float _initialAmbientVolume = 1f;
         [SerializeField] [Range(0, 1)] private float _initialSFXVolume = 1f;
-        [SerializeField] [Range(0, 1)] private float _initialVoicesVolume = 1f;
 
         [Header("Mixer Groups")]
         [field:SerializeField] public AudioMixerGroup MasterMixerModule;

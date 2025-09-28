@@ -18,6 +18,6 @@ namespace Code.Scripts.Types
         public float Threat => _threat;
         public float Diplomacy => _diplomacy;
 
-        public float AffinityMultiplier { get; set; } = 0;
+        public float AffinityMultiplier { get; set; } = 1;
     }
 }
