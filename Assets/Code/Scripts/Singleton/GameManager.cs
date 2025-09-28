@@ -63,8 +63,6 @@ namespace Code.Scripts.Singleton
         {
             // Show Start text
 
-            AudioManager.Instance.PlayMusic();
-
             _gameTimer.Begin(_roundDuration);
 
             RefreshPlayerChoices();
@@ -72,6 +70,9 @@ namespace Code.Scripts.Singleton
 
         private void EndGameSequence()
         {
+            StopAllCoroutines();
+            CleanupActionWheel();
+
             if (IsJudgesConvinced())
             {
                 // Play victory sound

@@ -579,57 +579,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 596580625771744165, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.001
-      objectReference: {fileID: 0}
     - target: {fileID: 1376122861718695236, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
       propertyPath: m_Name
       value: Environment
-      objectReference: {fileID: 0}
-    - target: {fileID: 4145656068593974244, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4145656068593974244, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626110946750540792, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4626110946750540792, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 4629658966912986259, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4629658966912986259, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 5047499127076295463, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5047499127076295463, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 7934412080564022272, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: prewarm
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7934412080564022272, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: InitialModule.startSize.scalar
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7934412080564022272, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: InitialModule.startSize.minScalar
-      value: 0.01
       objectReference: {fileID: 0}
     - target: {fileID: 8085861370586069313, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -672,8 +624,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects:
-    - {fileID: 6313054742075213212, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
+    m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
