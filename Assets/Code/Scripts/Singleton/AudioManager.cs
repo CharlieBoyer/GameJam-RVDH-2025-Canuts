@@ -22,9 +22,8 @@ namespace Code.Scripts.Singleton
         [field:SerializeField] public AudioMixerGroup MasterMixerModule;
         [field:SerializeField] public AudioMixerGroup AmbientMixerModule;
         [field:SerializeField] public AudioMixerGroup SFXMixerModule;
-        [field:SerializeField] public AudioMixerGroup VoicesMixerModule;
 
-        [Header("Ambient Audio Sources")]
+        [Header("Audio Sources")]
         [SerializeField] private AudioSource _musicAudioSource;
         [SerializeField] private AudioSource _sfxAudioSource;
 
@@ -98,6 +97,7 @@ namespace Code.Scripts.Singleton
 
         private void Awake()
         {
+            DontDestroyOnLoad(this.gameObject);
             MasterVolume = _initialMasterVolume;
             AmbientVolume = _initialAmbientVolume;
             SFXVolume = _initialSFXVolume;

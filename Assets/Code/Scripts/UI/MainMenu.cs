@@ -1,3 +1,4 @@
+using System;
 using Code.Scripts.Singleton;
 using TMPro;
 using UnityEngine;
@@ -65,6 +66,11 @@ namespace Code.Scripts.UI
 
             // _bgmSlider.onValueChanged.RemoveAllListeners();
             // _sfxSlider.onValueChanged.RemoveAllListeners();
+        }
+
+        private void Start()
+        {
+            AudioManager.Instance.PlayMusic();
         }
 
         // ---------- //
