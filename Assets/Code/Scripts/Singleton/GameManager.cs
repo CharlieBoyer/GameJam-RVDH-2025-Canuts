@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using Code.Scripts.Entities;
 using Code.Scripts.SO;
@@ -11,36 +12,40 @@ namespace Code.Scripts.Singleton
 {
     public class GameManager : SingletonMonoBehaviour<GameManager>
     {
-        [Header("Game settings")]
+        [Header("Trial settings")]
+        [SerializeField] private float _roundDuration = 30f;
         [SerializeField] [Range(1, 5)] private int _maxPlayerChoices = 3;
         [SerializeField] private int _judgesMaxConviction;
+        [SerializeField] private float _delayBetweenActions = 3f;
 
-        [Header("References")]
+        [Header("Trial References")]
+        [SerializeField] private GameTimer
         [SerializeField] private GameObject _choicePrefab;
         [SerializeField] private List<PlayerChoiceSO> _choicePool = new ();
         [SerializeField] private RectTransform _playerChoicePanel;
 
         public int JudgesMaxConviction => _judgesMaxConviction;
 
-        // Game Data
+        // Game Mode
         private GameMode _currentGameMode = GameMode.Trial;
 
         // Events
         public Action<PlayerChoiceSO> OnPlayerAction;
 
+        // Trial
+        private float _timer = 0f;
+
         private void Awake()
         {
-            DontDestroyOnLoad(gameObject);
             Judge.InitializeJudges();
         }
 
         private void Start()
         {
-            RefreshPlayerChoices();
-        }
+            // Show Start text
 
-        private void Update()
-        {
+
+            RefreshPlayerChoices();
         }
 
         // ----- //
@@ -52,8 +57,16 @@ namespace Code.Scripts.Singleton
             for (int index = 0; index < _maxPlayerChoices; index++)
             {
                 Choice playerChoice = Instantiate(_choicePrefab, _playerChoicePanel).GetComponent<Choice>();
-                PlayerChoiceSO choiceData = _choicePool[index];
+                PlayerChoiceSO choiceData = so[index];
                 playerChoice.Setup(choiceData);
+            }
+        }
+
+        private void CleanupActionWheel()
+        {
+            foreach (Transform children in transform)
+            {
+                Destroy(children.gameObject);
             }
         }
 
@@ -72,6 +85,22 @@ namespace Code.Scripts.Singleton
             }
 
             return so;
+        }
+
+        // ----- //
+
+        private void PrepareNextAction()
+        {
+            StartCoroutine(PrepareNextActionCoroutine());
+        }
+
+        private IEnumerator PrepareNextActionCoroutine()
+        {
+            CleanupActionWheel();
+
+            yield return new WaitForSeconds(_delayBetweenActions);
+
+            RefreshPlayerChoices();
         }
     }
 }

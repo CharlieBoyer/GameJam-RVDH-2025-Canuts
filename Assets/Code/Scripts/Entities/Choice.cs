@@ -67,8 +67,7 @@ namespace Code.Scripts.Entities
         private void OnChoiceClick()
         {
             // TODO: On button choice click
-            // GameManager.Instance?.OnPlayerAction.Invoke(_actionSO);
-            Debug.Log($"Game: You have select: {_actionSO.Name} with {_actionSO.ConvictionValue} conviction point(s) and targets: {_actionSO.Targets}");
+            GameManager.Instance?.OnPlayerAction.Invoke(_actionSO);
         }
     }
 }

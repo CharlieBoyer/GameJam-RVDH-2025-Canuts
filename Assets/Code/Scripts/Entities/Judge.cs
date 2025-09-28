@@ -98,6 +98,8 @@ namespace Code.Scripts.Entities
             }
 
             Conviction += totalConvictionPoints;
+
+            Debug.Log($"Judge {_refID}: + ({totalConvictionPoints}) → {Conviction}/{GameManager.Instance.JudgesMaxConviction}");
         }
     }
 }
