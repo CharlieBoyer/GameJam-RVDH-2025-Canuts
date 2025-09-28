@@ -14,19 +14,19 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 10
-  m_Fog: 0
+  m_Fog: 1
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_FogMode: 1
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.43574226, g: 0.49175274, b: 0.6037736, a: 1}
+  m_AmbientSkyColor: {r: 0.9811321, g: 0.81836116, b: 0.7728729, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.048949808, g: 0.30209476, b: 0.9433962, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubtractiveShadowColor: {r: 0.2028302, g: 0.38343537, b: 0.8113208, a: 1}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4b5358a4cdda07d439f8e7968076c221, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -147,8 +147,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 11
   m_Type: 1
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
+  m_Color: {r: 1, g: 0.8056768, b: 0.48584908, a: 1}
+  m_Intensity: 1.2
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -297,30 +297,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 757079986698532636, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.432
-      objectReference: {fileID: 0}
-    - target: {fileID: 757079986698532636, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10.954
-      objectReference: {fileID: 0}
-    - target: {fileID: 760357460428550263, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.427
-      objectReference: {fileID: 0}
-    - target: {fileID: 760357460428550263, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.675
-      objectReference: {fileID: 0}
-    - target: {fileID: 918416493591367619, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.432
-      objectReference: {fileID: 0}
-    - target: {fileID: 918416493591367619, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -8.67
-      objectReference: {fileID: 0}
     - target: {fileID: 1376122861718695236, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
       propertyPath: m_Name
       value: Environment
@@ -364,14 +340,6 @@ PrefabInstance:
     - target: {fileID: 8085861370586069313, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8303190081533503232, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 5.42
-      objectReference: {fileID: 0}
-    - target: {fileID: 8303190081533503232, guid: e11f8e0d4ad14aa4eb7330bbf55670e3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -10.945
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
