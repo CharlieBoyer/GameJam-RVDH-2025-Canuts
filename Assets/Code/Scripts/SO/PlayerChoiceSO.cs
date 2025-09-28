@@ -4,7 +4,7 @@ using UnityEngine;
 namespace Code.Scripts.SO
 {
     [CreateAssetMenu(fileName = "New PlayerChoice", menuName = "SO/Player Choice", order = 0)]
-    public class PlayerChoice: ScriptableObject
+    public class PlayerChoiceSO: ScriptableObject
     {
         [SerializeField] private string _name;
         [SerializeField] private int _convictionValue;

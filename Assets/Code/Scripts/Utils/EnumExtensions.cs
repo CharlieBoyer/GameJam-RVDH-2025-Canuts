@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System;
+using System.Text;
 
 namespace Code.Scripts.Utils
 {
@@ -21,6 +22,17 @@ namespace Code.Scripts.Utils
             }
 
             return result.ToString();
+        }
+
+        public static bool HasFlag(this System.Enum variable, System.Enum flag)
+        {
+            if (variable.GetType() != flag.GetType())
+                throw new ArgumentException("Error: Unable to perform comparison. Enumeration types doesn't match.");
+
+            int num = Convert.ToInt32(variable);
+            int flagNum = Convert.ToInt32(flag);
+
+            return (num & flagNum) == flagNum;
         }
     }
 }
