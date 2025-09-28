@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5045285686d14914b60b77f18da7cc11, type: 3}
-  m_Name: Menacer_A
+  m_Name: Threat_B
   m_EditorClassIdentifier: 
-  _name: "Sugg\xE9rer une r\xE9volte populaire"
-  _convictionValue: 1
+  _name: Est-ce donc la guerre contre Damas que vous voulez en nous volant ?
+  _convictionValue: 2
   _category: 4
-  _targets: -1
+  _targets: 55

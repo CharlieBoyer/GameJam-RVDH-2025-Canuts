@@ -10,9 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5045285686d14914b60b77f18da7cc11, type: 3}
-  m_Name: Menacer_B
+  m_Name: Attack_B
   m_EditorClassIdentifier: 
-  _name: Exposer des perspectives de guerre
+  _name: "Ce Renier n\u2019est pas un homme. Sa semence est s\xE8che et il n\u2019a
+    point su donner d\u2019h\xE9ritier \xE0 son fief."
   _convictionValue: 2
-  _category: 4
-  _targets: -1
+  _category: 2
+  _targets: 50
