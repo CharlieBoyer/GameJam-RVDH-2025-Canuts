@@ -63,6 +63,8 @@ namespace Code.Scripts.Singleton
         {
             // Show Start text
 
+            AudioManager.Instance.PlayMusic();
+
             _gameTimer.Begin(_roundDuration);
 
             RefreshPlayerChoices();
