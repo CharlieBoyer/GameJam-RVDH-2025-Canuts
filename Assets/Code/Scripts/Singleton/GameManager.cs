@@ -28,7 +28,7 @@ namespace Code.Scripts.Singleton
 
         private void Start()
         {
-            throw new NotImplementedException();
+            AudioManager.Instance.PlayMusic();
         }
     }
 }
