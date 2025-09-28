@@ -44,7 +44,7 @@ namespace Code.Scripts.Singleton
         {
             // Show Start text
 
-
+            AudioManager.Instance.PlayMusic();
             RefreshPlayerChoices();
         }
 
