@@ -1,3 +1,4 @@
+using System;
 using Code.Scripts.Singleton;
 using TMPro;
 using UnityEngine;
@@ -11,6 +12,7 @@ namespace Code.Scripts.UI
         [SerializeField] private RectTransform _panelMainMenu;
         [SerializeField] private Button _buttonPlay;
         [SerializeField] private Button _buttonOptions;
+        [SerializeField] private Button _buttonExtras;
         [SerializeField] private Button _buttonCredits;
         [SerializeField] private Button _buttonExit;
 
@@ -19,6 +21,10 @@ namespace Code.Scripts.UI
         [SerializeField] private Button _returnButtonOptions;
         [SerializeField] private Slider _bgmSlider;
         [SerializeField] private Slider _sfxSlider;
+
+        [Header("Extras")]
+        [SerializeField] private RectTransform _panelExtras;
+        [SerializeField] private Button _returnButtonExtras;
 
         [Header("Credits")]
         [SerializeField] private RectTransform _panelCredits;
@@ -34,10 +40,12 @@ namespace Code.Scripts.UI
         {
             _buttonPlay.onClick.AddListener(Play);
             _buttonOptions.onClick.AddListener(() => ShowOptions(true));
+            _buttonExtras.onClick.AddListener(() => ShowExtras(true));
             _buttonCredits.onClick.AddListener(() => ShowCredits(true));
             _buttonExit.onClick.AddListener(Exit);
 
             _returnButtonOptions.onClick.AddListener(() => ShowOptions(false));
+            _returnButtonExtras.onClick.AddListener(() => ShowExtras(false));
             _returnButtonCredits.onClick.AddListener(() => ShowCredits(false));
 
             // _bgmSlider.onValueChanged.AddListener();
@@ -48,14 +56,21 @@ namespace Code.Scripts.UI
         {
             _buttonPlay.onClick.RemoveAllListeners();
             _buttonOptions.onClick.RemoveAllListeners();
+            _buttonExtras.onClick.RemoveAllListeners();
             _buttonCredits.onClick.RemoveAllListeners();
             _buttonExit.onClick.RemoveAllListeners();
 
             _returnButtonOptions.onClick.RemoveAllListeners();
+            _returnButtonExtras.onClick.RemoveAllListeners();
             _returnButtonCredits.onClick.RemoveAllListeners();
 
             // _bgmSlider.onValueChanged.RemoveAllListeners();
             // _sfxSlider.onValueChanged.RemoveAllListeners();
+        }
+
+        private void Start()
+        {
+            AudioManager.Instance.PlayMusic();
         }
 
         // ---------- //
@@ -90,6 +105,20 @@ namespace Code.Scripts.UI
             {
                 _panelMainMenu.gameObject.SetActive(true);
                 _panelCredits.gameObject.SetActive(false);
+            }
+        }
+
+        private void ShowExtras(bool enable)
+        {
+            if (enable)
+            {
+                _panelMainMenu.gameObject.SetActive(false);
+                _panelExtras.gameObject.SetActive(true);
+            }
+            else
+            {
+                _panelMainMenu.gameObject.SetActive(true);
+                _panelExtras.gameObject.SetActive(false);
             }
         }
 
