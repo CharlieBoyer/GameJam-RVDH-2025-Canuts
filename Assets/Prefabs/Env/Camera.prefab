@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2809103889205465286}
   - component: {fileID: 2863562303790112898}
+  - component: {fileID: 3586433812765579771}
   m_Layer: 0
   m_Name: VCam Main
   m_TagString: Untagged
@@ -75,6 +76,14 @@ MonoBehaviour:
       BarrelClipping: 0.25
       Anamorphism: 0
   BlendHint: 0
+--- !u!81 &3586433812765579771
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 587240898233127441}
+  m_Enabled: 1
 --- !u!1 &845005588929040177
 GameObject:
   m_ObjectHideFlags: 0
