@@ -50,7 +50,6 @@ namespace Code.Scripts.Singleton
 
         public void StartDialogue(int indexList, int indexDialogue)
         {
-            Debug.Log("index" + indexList);
             NameText.text = Sequences[indexList].Dialogues[indexDialogue].characterName;
             _sentences.Clear();
 
@@ -74,7 +73,6 @@ namespace Code.Scripts.Singleton
             if (_sentences.Count == 0)
             {
                 EndDialogue();
-                _indexDialogue++;
                 if (_indexDialogue == Sequences[GameManager.Instance.DialogueIndex].Dialogues.Count)
                 {
                     OnDialogueSequenceEnd?.Invoke();

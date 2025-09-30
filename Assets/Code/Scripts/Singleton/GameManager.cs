@@ -46,14 +46,14 @@ namespace Code.Scripts.Singleton
         private void OnEnable()
         {
             OnPlayerAction += PrepareNextAction;
-            DialogueManager.OnDialogueSequenceEnd += StartGameSequence;
+            // DialogueManager.OnDialogueSequenceEnd += StartGameSequence;
             _gameTimer.OnGameTimerEnd += EndGameSequence;
         }
 
         private void OnDisable()
         {
             OnPlayerAction -= PrepareNextAction;
-            DialogueManager.OnDialogueSequenceEnd -= StartGameSequence;
+            // DialogueManager.OnDialogueSequenceEnd -= StartGameSequence;
             _gameTimer.OnGameTimerEnd -= EndGameSequence;
         }
 
@@ -61,8 +61,8 @@ namespace Code.Scripts.Singleton
         {
             AudioManager.Instance.PlayMusic();
 
-            DialogueManager.Instance.UI.SetActive(true);
-            DialogueManager.Instance.StartDialogue(DialogueIndex, 0);
+            // DialogueManager.Instance.UI.SetActive(true);
+            // DialogueManager.Instance.StartDialogue(DialogueIndex, 0);
         }
 
         private void Update()
@@ -77,7 +77,7 @@ namespace Code.Scripts.Singleton
             _currentGameMode = GameMode.Trial;
             _gameTimer.Begin(_roundDuration);
 
-            DialogueManager.Instance.UI.SetActive(false);
+            // DialogueManager.Instance.UI.SetActive(false);
 
             RefreshPlayerChoices();
         }
@@ -98,10 +98,11 @@ namespace Code.Scripts.Singleton
 
             _currentGameMode = GameMode.Narrative;
 
-            DialogueIndex++;
+            StartGameSequence();
+            // DialogueIndex++;
 
-            DialogueManager.Instance.UI.SetActive(true);
-            DialogueManager.Instance.StartDialogue(DialogueIndex, 0);
+            // DialogueManager.Instance.UI.SetActive(true);
+            // DialogueManager.Instance.StartDialogue(DialogueIndex, 0);
         }
 
         // ----- //
