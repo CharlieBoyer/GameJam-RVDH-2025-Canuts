@@ -1,13 +1,15 @@
-using UnityEngine;
 using System.Collections.Generic;
 using Code.Scripts.SO;
+using UnityEngine;
 
-
-[System.Serializable]
-public class SequenceDialogue
+namespace Code.Scripts.Types
 {
-    [SerializeField]
-    private List<Dialogue> dialogues;
+    [System.Serializable]
+    public class SequenceDialogue
+    {
+        [SerializeField]
+        private List<DialogueSO> dialogues;
 
-    public List<Dialogue> Dialogues => dialogues;
+        public List<DialogueSO> Dialogues => dialogues;
+    }
 }

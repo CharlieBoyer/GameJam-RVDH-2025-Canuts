@@ -2,10 +2,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Code.Scripts.SO;
+using Code.Scripts.Types;
 using Code.Scripts.Utils;
 using UnityEngine;
 using TMPro;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace Code.Scripts.Singleton
@@ -102,27 +102,27 @@ namespace Code.Scripts.Singleton
             }
         }
 
-        public void ChangeCharacterDisplay(Dialogue dialogue)
+        public void ChangeCharacterDisplay(DialogueSO dialogueSO)
         {
             CharacterLeft.gameObject.SetActive(false);
             CharacterRight.gameObject.SetActive(false);
             CharacterMiddle.gameObject.SetActive(false);
 
-            if (dialogue.pos == POSITION.LEFT)
+            if (dialogueSO.pos == POSITION.LEFT)
             {
                 CharacterLeft.gameObject.SetActive(true);
-                CharacterLeft.sprite = dialogue.characterSprite;
+                CharacterLeft.sprite = dialogueSO.characterSprite;
             }
             else
-            if (dialogue.pos == POSITION.RIGHT)
+            if (dialogueSO.pos == POSITION.RIGHT)
             {
                 CharacterRight.gameObject.SetActive(true);
-                CharacterRight.sprite = dialogue.characterSprite;
+                CharacterRight.sprite = dialogueSO.characterSprite;
             }
-            else if (dialogue.pos == POSITION.MIDDLE)
+            else if (dialogueSO.pos == POSITION.MIDDLE)
             {
                 CharacterMiddle.gameObject.SetActive(true);
-                CharacterMiddle.sprite = dialogue.characterSprite;
+                CharacterMiddle.sprite = dialogueSO.characterSprite;
             }
         }
     }

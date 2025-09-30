@@ -1,16 +1,11 @@
-using UnityEngine;
-using Code.Scripts.Types;
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine.UIElements;
+using UnityEngine;
 
 namespace Code.Scripts.SO
 {
     [CreateAssetMenu(fileName = "New PlayerChoice", menuName = "SO/Dialogue", order = 0)]
-    [System.Serializable]
-    public class Dialogue : ScriptableObject
+    [Serializable]
+    public class DialogueSO : ScriptableObject
     {
         public string characterName;
 
