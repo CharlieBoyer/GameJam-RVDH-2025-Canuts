@@ -1,4 +1,3 @@
-using System;
 using Code.Scripts.Singleton;
 using TMPro;
 using UnityEngine;

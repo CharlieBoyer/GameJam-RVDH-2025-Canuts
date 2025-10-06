@@ -34,6 +34,8 @@ namespace Code.Scripts.Singleton
         // Events
         public Action<PlayerChoiceSO> OnPlayerAction;
 
+        public int DialogueIndex = 0;
+
         // ----- //
 
         private void Awake()
@@ -44,12 +46,23 @@ namespace Code.Scripts.Singleton
         private void OnEnable()
         {
             OnPlayerAction += PrepareNextAction;
+            // DialogueManager.OnDialogueSequenceEnd += StartGameSequence;
             _gameTimer.OnGameTimerEnd += EndGameSequence;
         }
 
         private void OnDisable()
         {
             OnPlayerAction -= PrepareNextAction;
+            // DialogueManager.OnDialogueSequenceEnd -= StartGameSequence;
+            _gameTimer.OnGameTimerEnd -= EndGameSequence;
+        }
+
+        private void Start()
+        {
+            AudioManager.Instance.PlayMusic();
+
+            // DialogueManager.Instance.UI.SetActive(true);
+            // DialogueManager.Instance.StartDialogue(DialogueIndex, 0);
         }
 
         private void Update()
@@ -59,11 +72,12 @@ namespace Code.Scripts.Singleton
 
         // ----- //
 
-        private void Start()
+        private void StartGameSequence()
         {
-            // Show Start text
-
+            _currentGameMode = GameMode.Trial;
             _gameTimer.Begin(_roundDuration);
+
+            // DialogueManager.Instance.UI.SetActive(false);
 
             RefreshPlayerChoices();
         }
@@ -82,7 +96,13 @@ namespace Code.Scripts.Singleton
                 // Play loss sound
             }
 
-            // TransitionToNarrativeMode()
+            _currentGameMode = GameMode.Narrative;
+
+            StartGameSequence();
+            // DialogueIndex++;
+
+            // DialogueManager.Instance.UI.SetActive(true);
+            // DialogueManager.Instance.StartDialogue(DialogueIndex, 0);
         }
 
         // ----- //

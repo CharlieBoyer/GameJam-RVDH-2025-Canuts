@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Code.Scripts.SO;
+using Code.Scripts.Types;
 using Code.Scripts.Utils;
 using UnityEngine;
 using TMPro;
@@ -11,23 +12,29 @@ namespace Code.Scripts.Singleton
 {
     public class DialogueManager : SingletonMonoBehaviour<DialogueManager>
     {
-        public TextMeshProUGUI dialogueText;
-        public TextMeshProUGUI nameText;
+        public GameObject UI;
 
-        public Image characterLeft;
-        public Image characterRight;
-        public Image characterMiddle;
+        public TextMeshProUGUI DialogueText;
+        public TextMeshProUGUI NameText;
 
-        private Queue<string> sentences;
-        private int indexList = 0;
-        private int indexDialogue = 0;
-        public float dialogueSpeed;
-        
-        public List<SequenceDialogue> sequences = new();
+        public Image CharacterLeft;
+        public Image CharacterRight;
+        public Image CharacterMiddle;
+
+        private Queue<string> _sentences;
+        private int _indexList = 0;
+        private int _indexDialogue = 0;
+        public float DialogueSpeed;
+
+        public List<SequenceDialogue> Sequences = new();
+
+        // ---- //
+
+        public static Action OnDialogueSequenceEnd;
 
         private void Start()
         {
-            sentences = new Queue<string>();
+            _sentences = new Queue<string>();
 
             StartDialogue(0,0);
         }
@@ -43,16 +50,14 @@ namespace Code.Scripts.Singleton
 
         public void StartDialogue(int indexList, int indexDialogue)
         {
-            Debug.Log("index" + indexList);
-            nameText.text = sequences[indexList].Dialogues[indexDialogue].characterName;
-            sentences.Clear();
+            NameText.text = Sequences[indexList].Dialogues[indexDialogue].characterName;
+            _sentences.Clear();
 
-            ChangeCharacterDisplay(sequences[indexList].Dialogues[indexDialogue]);
+            ChangeCharacterDisplay(Sequences[indexList].Dialogues[indexDialogue]);
 
-            foreach (string sentence in sequences[indexList].Dialogues[indexDialogue].dialogueSentences)
+            foreach (string sentence in Sequences[indexList].Dialogues[indexDialogue].dialogueSentences)
             {
-
-                sentences.Enqueue(sentence);
+                _sentences.Enqueue(sentence);
             }
 
             DisplayNextSentence();
@@ -60,21 +65,23 @@ namespace Code.Scripts.Singleton
 
         public void DisplayNextSentence()
         {
-            if (sentences.Count == 0)
+            if (GameManager.Instance.DialogueIndex == Sequences.Count)
+            {
+                SceneLoader.Instance.Load("Menu");
+            }
+
+            if (_sentences.Count == 0)
             {
                 EndDialogue();
-                indexDialogue++;
-                if (indexDialogue == sequences[indexList].Dialogues.Count)
+                if (_indexDialogue == Sequences[GameManager.Instance.DialogueIndex].Dialogues.Count)
                 {
-                    indexList++;
-                    indexDialogue = 0;
+                    OnDialogueSequenceEnd?.Invoke();
                 }
-                StartDialogue(indexList,indexDialogue);
                 return;
             }
 
-            string sentence = sentences.Dequeue();
-            dialogueText.text = sentence;
+            string sentence = _sentences.Dequeue();
+            DialogueText.text = sentence;
             StopAllCoroutines();
             StartCoroutine(TypeSentence(sentence));
         }
@@ -86,36 +93,36 @@ namespace Code.Scripts.Singleton
 
         IEnumerator TypeSentence(string sentence)
         {
-            dialogueText.text = "";
+            DialogueText.text = "";
             foreach (char character in sentence.ToCharArray())
             {
-                dialogueText.text += character;
+                DialogueText.text += character;
                 //yield return new waitforseconds(dialoguespeed);
                 yield return null;
             }
         }
 
-        public void ChangeCharacterDisplay(Dialogue dialogue)
+        public void ChangeCharacterDisplay(DialogueSO dialogueSO)
         {
-            characterLeft.gameObject.SetActive(false);
-            characterRight.gameObject.SetActive(false);
-            characterMiddle.gameObject.SetActive(false);
+            CharacterLeft.gameObject.SetActive(false);
+            CharacterRight.gameObject.SetActive(false);
+            CharacterMiddle.gameObject.SetActive(false);
 
-            if (dialogue.pos == POSITION.LEFT)
+            if (dialogueSO.pos == POSITION.LEFT)
             {
-                characterLeft.gameObject.SetActive(true);
-                characterLeft.sprite = dialogue.characterSprite;
+                CharacterLeft.gameObject.SetActive(true);
+                CharacterLeft.sprite = dialogueSO.characterSprite;
             }
             else
-            if (dialogue.pos == POSITION.RIGHT)
+            if (dialogueSO.pos == POSITION.RIGHT)
             {
-                characterRight.gameObject.SetActive(true);
-                characterRight.sprite = dialogue.characterSprite;
+                CharacterRight.gameObject.SetActive(true);
+                CharacterRight.sprite = dialogueSO.characterSprite;
             }
-            else if (dialogue.pos == POSITION.MIDDLE)
+            else if (dialogueSO.pos == POSITION.MIDDLE)
             {
-                characterMiddle.gameObject.SetActive(true);
-                characterMiddle.sprite = dialogue.characterSprite;
+                CharacterMiddle.gameObject.SetActive(true);
+                CharacterMiddle.sprite = dialogueSO.characterSprite;
             }
         }
     }
