@@ -1,13 +1,43 @@
-﻿using Code.Scripts.Utils;
+﻿using System;
+using Code.Scripts.SO;
+using Code.Scripts.Utils;
 using UnityEngine;
 
 namespace Code.Scripts.GameFSM
 {
     public class GameStateManager: MonoBehaviour
     {
-        public GameStateInstances States { get; } = new();
+        #region Editor fields
 
+        [Header("Trial Settings")]
+        [SerializeField] private float _roundDuration = 60f;
+        [SerializeField] private int _playerMaxChoices = 3;
+        [SerializeField] private float _playerChoiceCooldown = 3f;
+        [SerializeField] private int _judgesMaxConviction = 10;
+        [SerializeField] private int _judgesConvincedThreshold = 7;
+
+        [Header("Story settings")]
+        [SerializeField] private float _textWritingSpeed = 1f;
+
+        #endregion
+
+        #region Gameplay properties
+
+        public int JudgesMaxConviction => _judgesMaxConviction;
+
+        #endregion
+
+        #region Events
+
+        public Action<PlayerChoiceSO> OnPlayerAction;
+        public Action OnGameCleanup;
+
+        #endregion
+
+        public GameStateInstances States { get; } = new();
         private GameBaseState _currentState;
+
+        // ----- //
 
         private void Start()
         {
@@ -18,6 +48,11 @@ namespace Code.Scripts.GameFSM
         private void Update()
         {
             _currentState.UpdateState();
+        }
+
+        private void OnDestroy()
+        {
+            OnGameCleanup?.Invoke();
         }
 
         /// <summary>

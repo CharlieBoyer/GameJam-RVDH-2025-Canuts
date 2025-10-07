@@ -67,7 +67,7 @@ namespace Code.Scripts.Singleton
 
         private void Update()
         {
-            _gameTimer.Tick();
+            //_gameTimer.Tick();
         }
 
         // ----- //
