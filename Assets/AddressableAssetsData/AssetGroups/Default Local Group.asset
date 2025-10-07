@@ -1,0 +1,281 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_GUID: 05a62305616b6e34799baff1557e5d3e
+  m_SerializeEntries:
+  - m_GUID: 0245ee6f73b101840ae6acc016ad68ea
+    m_Address: Assets/Data/Dialogues/01_Intro/01_part4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 08837a6ff00e59948b9def2f7e8c6220
+    m_Address: Assets/Data/Dialogues/05a_End_Success/05a_part0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a123418b08649547afec42bcc49d168
+    m_Address: Assets/Data/Dialogues/05a_End_Success/05a_part4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0a1972109db4bce498b88f336c591f00
+    m_Address: Assets/Data/Dialogues/05a_End_Success/05a_part8.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1146525ce1eb72f47847b12220629576
+    m_Address: Assets/Data/Dialogues/03/03_part0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1a7fdf7e0560dfa499835042cff4e202
+    m_Address: Assets/Data/Choices/Attack_A.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bfdba452a02d4e4e8604825bb8ef372
+    m_Address: Assets/Data/Choices/Dishonor_B.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1e48d01a652f74b4eadd15d63b178ed9
+    m_Address: Assets/Data/Dialogues/04/04_part5.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28438e2760149274fb123507661f9486
+    m_Address: Assets/Data/Dialogues/03/03_part2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4296c1747ea809b4fb3089fe25bb7d97
+    m_Address: Assets/Data/Dialogues/02/02_part3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45b592fb21e8c224c88423616c03fbe5
+    m_Address: Assets/Data/Dialogues/03/03_part3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b77d574535e20e4d85080f9562bc1cf
+    m_Address: Assets/Data/Choices/Injustice_B.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d0234cb6acce7f41bd16a7a518f99b3
+    m_Address: Assets/Data/Choices/Threat_B.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5010ba2e630979d41a0edb40953b5d47
+    m_Address: Assets/Data/Dialogues/01_Intro/01_part3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51a97e67d52eb0c47932fdaeeea027f8
+    m_Address: Assets/Data/Dialogues/04/04_part3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5358c7f93a2c4aa4892eac1f9d34ac1a
+    m_Address: Assets/Data/Dialogues/05a_End_Success/05a_part6.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 61334cb2272fc9a4bbbedb0ddedaf1a9
+    m_Address: Assets/Data/Dialogues/02/02_part1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65f0963559ce66a4da163bfe26eea29e
+    m_Address: Assets/Data/Dialogues/05a_End_Success/05a_part5.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f67ce7a34448c248ab146c07a3ceb7b
+    m_Address: Assets/Data/Dialogues/01_Intro/01_part0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6f9187edcb6c6cd428c0e38ef7211c79
+    m_Address: Assets/Data/Dialogues/05b_End_Failure/05b_part0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 77e24aa22a096bd4db4de4d30707ac7e
+    m_Address: Assets/Data/Dialogues/01_Intro/01_part5.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8401866ddae1a6b47aea19c67935145d
+    m_Address: Assets/Data/Dialogues/05a_End_Success/05a_part2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8438418bc7984cb4dad7ff672cf0c46c
+    m_Address: Assets/Data/Dialogues/05a_End_Success/05a_part1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ebb68510e6795646823801b891f742e
+    m_Address: Assets/Data/Choices/Diplomacy_B.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7362ff126a54474f84f99584455d2a4
+    m_Address: Assets/Data/Choices/Dishonor_A.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aecf3fe31c84b034ea8bce81110db458
+    m_Address: Assets/Data/Dialogues/02/02_part0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bba1e2cd3c53e434bac9caa75599369f
+    m_Address: Assets/Data/Dialogues/04/04_part2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd868a7a8c21b4d4e835308d382c14d9
+    m_Address: Assets/Data/Dialogues/03/03_part1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdaff04d70ed2de47a56b6f79d4f6526
+    m_Address: Assets/Data/Dialogues/05b_End_Failure/05b_part1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdd40eb6981447440ad104862c54bf37
+    m_Address: Assets/Data/Choices/Attack_B.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bffae50aa9ec599448c20d1947812563
+    m_Address: Assets/Data/Dialogues/04/04_part0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2aacddbeac17f142a62444408736872
+    m_Address: Assets/Data/Choices/Threat_A.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c948d9d143da0b747858ed44b26c7a03
+    m_Address: Assets/Data/Dialogues/05a_End_Success/05a_part7.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca6dc58e35b7e05468d1a1c4e1d12d25
+    m_Address: Assets/Data/Dialogues/05a_End_Success/05a_part3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cd637f204e37f194fbb3cb6f55e76d18
+    m_Address: Assets/Data/Dialogues/01_Intro/01_part2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d17262daf76dbf64390ae23ae7284bb2
+    m_Address: Assets/Data/Dialogues/04/04_part1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d54e641992b1d6f4e8c3e69fd743a9d5
+    m_Address: Assets/Data/Dialogues/04/04_part4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: db52b71b86782434b918eb1f02743452
+    m_Address: Assets/Data/Dialogues/01_Intro/01_part6.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e6f2e7d427c80d94887a53b3485f5bf3
+    m_Address: Assets/Data/Dialogues/01_Intro/01_part1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7414e95eb7410a4f8dfe51a64e181c8
+    m_Address: Assets/Data/Choices/Diplomacy_A.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: eb508603483aaf84091aff2650a6894d
+    m_Address: Assets/Data/Dialogues/01_Intro/01_part7.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef6fe51389f028c4ea7c520c67807d28
+    m_Address: Assets/Data/Dialogues/02/02_part2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Dialogues
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb2849e8000610d41adf7f8810f96823
+    m_Address: Assets/Data/Choices/Injustice_A.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: fe5171c427ba4f44ea0872a987dba09d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 7ed29541bf50628458a7d1a87a054217, type: 2}
+    - {fileID: 11400000, guid: 0d270395524656345b0a9a1bd5945fc5, type: 2}
