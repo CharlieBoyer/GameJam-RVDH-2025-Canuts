@@ -36,8 +36,7 @@ namespace Code.Scripts.Utils
         {
             List<T> resourcesAssets;
 
-            AsyncOperationHandle<IList<T>> fileHandle =
-                Addressables.LoadAssetsAsync<T>(label);
+            AsyncOperationHandle<IList<T>> fileHandle = Addressables.LoadAssetsAsync<T>(label);
 
             yield return fileHandle;
 

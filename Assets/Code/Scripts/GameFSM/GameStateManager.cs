@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Code.Scripts.GameFSM
 {
-    public class GameStateManager: MonoBehaviour
+    public class GameStateManager: SingletonMonoBehaviour<GameStateManager>
     {
         #region Editor fields
 
@@ -21,18 +21,15 @@ namespace Code.Scripts.GameFSM
 
         #endregion
 
-        #region Gameplay properties
+        #region Gameplay/Settings Properties
+
+        public float TextWritingSpeed => _textWritingSpeed;
 
         public int JudgesMaxConviction => _judgesMaxConviction;
 
         #endregion
 
-        #region Events
-
         public Action<PlayerChoiceSO> OnPlayerAction;
-        public Action OnGameCleanup;
-
-        #endregion
 
         public GameStateInstances States { get; } = new();
         private GameBaseState _currentState;
@@ -48,11 +45,6 @@ namespace Code.Scripts.GameFSM
         private void Update()
         {
             _currentState.UpdateState();
-        }
-
-        private void OnDestroy()
-        {
-            OnGameCleanup?.Invoke();
         }
 
         /// <summary>

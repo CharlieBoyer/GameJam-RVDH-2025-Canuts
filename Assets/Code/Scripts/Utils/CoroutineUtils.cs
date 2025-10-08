@@ -52,5 +52,9 @@ namespace Code.Scripts.Utils
             action();
             yield return 0;
         }
+
+        public static IEnumerator Do(IEnumerator action) {
+            yield return action;
+        }
     }
 }

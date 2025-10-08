@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 05a62305616b6e34799baff1557e5d3e
   m_currentHash:
     serializedVersion: 2
-    Hash: a109cdf6a6e393c890cfd5812db00fa0
+    Hash: 00000000000000000000000000000000
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
     - Context
     - Choices
     - Dialogues
+    - Sequences
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 2e63b639b73ca7644bc194eea2671550, type: 2}

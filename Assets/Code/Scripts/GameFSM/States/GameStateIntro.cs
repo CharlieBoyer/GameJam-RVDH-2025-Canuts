@@ -45,19 +45,21 @@ namespace Code.Scripts.GameFSM.States
         public override void ExitState()
         {
             _introCanvas.OnIntroCanvasClick -= ShowNextContextSentence;
+            _introCanvas.FadeOutBlackScreen();
         }
 
         // ----- //
 
         private void ShowNextContextSentence()
         {
+            if (_contextIndex >= _contextAssets.Count)
+            {
+                _manager.SwitchState(_manager.States.Dialogue);
+                return;
+            }
+
             _introCanvas.ShowInTextBox(_contextAssets[_contextIndex].Text);
             _contextIndex++;
-
-            if (_contextIndex > _contextAssets.Count)
-            {
-                _introCanvas.FadeOutBlackScreen();
-            }
         }
 
         private void LoadContextAssets()

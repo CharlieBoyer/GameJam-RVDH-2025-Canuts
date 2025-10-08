@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections;
-using Code.Scripts.Utils;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -58,9 +57,14 @@ namespace Code.Scripts.UI
 
         public void FadeOutBlackScreen()
         {
-            _screenCanvasGroup.DOFade(0, _screenFadeOutDuration);
+            IEnumerator AnimationRoutine()
+            {
+                _textCanvasGroup.DOFade(0, _textFadeDuration);
+                yield return new WaitForSeconds(_textFadeDuration);
+                _screenCanvasGroup.DOFade(0, _screenFadeOutDuration);
+            }
+
+            StartCoroutine(AnimationRoutine());
         }
-
-
     }
 }

@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d73737c4b410458ea16b80b3faa99142, type: 3}
-  m_Name: C_part4
+  m_Script: {fileID: 11500000, guid: 6d7c1e2813e71f14ab2c9fafda6ea325, type: 3}
+  m_Name: S05b
   m_EditorClassIdentifier: 
-  _indexID: 4
-  _text: "C'est dans ce contexte de tensions qu'est cont\xE9 l'histoire d'<font=\"Tangerine-Bold
-    SDF\">Ous\xE2ma</font>, prince syrien ambassadeur, exil\xE9 \xE0 Damas..."
+  _dialogues:
+  - {fileID: 11400000, guid: 6f9187edcb6c6cd428c0e38ef7211c79, type: 2}
+  - {fileID: 11400000, guid: bdaff04d70ed2de47a56b6f79d4f6526, type: 2}

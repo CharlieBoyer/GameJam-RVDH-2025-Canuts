@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: C_part3
   m_EditorClassIdentifier: 
   _indexID: 3
-  _text: "Mais au nord... s'\xE9l\xE8ve la puissance de Zengi, <i>attabeg</i> de
-    Mossoul et d'Alep.\nSes ambitions inqui\xE8tent aussi bien les crois\xE9s que
-    certains princes musulmans."
+  _text: "Mais au nord... s'\xE9l\xE8ve la puissance de Zengi, attabeg de Mossoul
+    et d'Alep.\nSes ambitions inqui\xE8tent aussi bien les crois\xE9s que certains
+    princes musulmans."

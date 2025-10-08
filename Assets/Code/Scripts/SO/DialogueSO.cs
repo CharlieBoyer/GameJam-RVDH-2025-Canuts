@@ -1,23 +1,17 @@
 using System;
+using Code.Scripts.Types;
 using UnityEngine;
 
 namespace Code.Scripts.SO
 {
-    [CreateAssetMenu(fileName = "New PlayerChoice", menuName = "SO/Dialogue", order = 0)]
+    [CreateAssetMenu(fileName = "New PlayerChoice", menuName = "SO/Dialogue", order = 1)]
     [Serializable]
     public class DialogueSO : ScriptableObject
     {
-        public string characterName;
+        public string CharacterName;
 
-        [TextArea(3,10)]
-        public string[] dialogueSentences;
-        public POSITION pos;
-        public Sprite characterSprite;
-    }
-
-    [System.Serializable]
-    public enum POSITION
-    {
-        LEFT, RIGHT, MIDDLE
+        [TextArea(3,10)] public string[] DialogueSentences;
+        public Position Pos;
+        public Sprite CharacterSprite;
     }
 }
