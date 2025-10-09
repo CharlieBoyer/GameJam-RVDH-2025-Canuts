@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Dialogues
+  m_EditorClassIdentifier: 
+  m_GroupName: Dialogues
+  m_GUID: 43be4d92451547b4aa1e5429f01d9372
+  m_SerializeEntries:
+  - m_GUID: 153c9e8260ac5054c937e9415ce36441
+    m_Address: Assets/Data/Sequences/S04.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sequences
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 266cb5f9b0f91624984050e19d6fb980
+    m_Address: Assets/Data/Context/C_part3.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Context
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d1c53090807a5e439b3525ee1e6eb27
+    m_Address: Assets/Data/Sequences/S02.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sequences
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8084a2e5625eced4dbf8e35cf2db39a7
+    m_Address: Assets/Data/Context/C_part0.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Context
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 928ce4dfd0d80e242bbccf55bf163b34
+    m_Address: Assets/Data/Sequences/S05b.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sequences
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 98ea51bd002e9164fb15f6a8a90494aa
+    m_Address: Assets/Data/Sequences/S05a.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sequences
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9add93b23a6b6ad4399df232814968a8
+    m_Address: Assets/Data/Sequences/S01.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sequences
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ea08827b8ba61f4cbc7e626dd27c18d
+    m_Address: Assets/Data/Context/C_part2.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Context
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b74d72f8320999a45bea79605f2a1cbf
+    m_Address: Assets/Data/Context/C_part4.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Context
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea6c2e206e7f3dd43a9f0d6e0f1a3ac2
+    m_Address: Assets/Data/Sequences/S03.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Sequences
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8922253910f55148b4d6cd3b2a3f694
+    m_Address: Assets/Data/Context/C_part1.asset
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Context
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: fe5171c427ba4f44ea0872a987dba09d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: b847449255db613419576c3ccf9d2972, type: 2}
+    - {fileID: 11400000, guid: ec13c279a084b7c46971d1a0c943ec66, type: 2}

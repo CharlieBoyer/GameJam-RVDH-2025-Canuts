@@ -1,7 +1,8 @@
+/*
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using Code.Scripts.SO;
+using Code.Scripts.SO.Dialogues;
 using Code.Scripts.Types;
 using Code.Scripts.Utils;
 using UnityEngine;
@@ -26,7 +27,7 @@ namespace Code.Scripts.Singleton
         private int _indexDialogue = 0;
         public float DialogueSpeed;
 
-        public List<SequenceDialogue> Sequences = new();
+        public List<SequenceSO> Sequences = new();
 
         // ---- //
 
@@ -50,12 +51,12 @@ namespace Code.Scripts.Singleton
 
         public void StartDialogue(int indexList, int indexDialogue)
         {
-            NameText.text = Sequences[indexList].Dialogues[indexDialogue].characterName;
+            NameText.text = Sequences[indexList].Part[indexDialogue].CharacterName;
             _sentences.Clear();
 
-            ChangeCharacterDisplay(Sequences[indexList].Dialogues[indexDialogue]);
+            ChangeCharacterDisplay(Sequences[indexList].Part[indexDialogue]);
 
-            foreach (string sentence in Sequences[indexList].Dialogues[indexDialogue].dialogueSentences)
+            foreach (string sentence in Sequences[indexList].Part[indexDialogue].DialogueSentences)
             {
                 _sentences.Enqueue(sentence);
             }
@@ -73,7 +74,7 @@ namespace Code.Scripts.Singleton
             if (_sentences.Count == 0)
             {
                 EndDialogue();
-                if (_indexDialogue == Sequences[GameManager.Instance.DialogueIndex].Dialogues.Count)
+                if (_indexDialogue == Sequences[GameManager.Instance.DialogueIndex].Part.Count)
                 {
                     OnDialogueSequenceEnd?.Invoke();
                 }
@@ -108,22 +109,23 @@ namespace Code.Scripts.Singleton
             CharacterRight.gameObject.SetActive(false);
             CharacterMiddle.gameObject.SetActive(false);
 
-            if (dialogueSO.pos == POSITION.LEFT)
+            if (dialogueSO.Pos == Position.Left)
             {
                 CharacterLeft.gameObject.SetActive(true);
-                CharacterLeft.sprite = dialogueSO.characterSprite;
+                CharacterLeft.sprite = dialogueSO.CharacterSprite;
             }
             else
-            if (dialogueSO.pos == POSITION.RIGHT)
+            if (dialogueSO.Pos == Position.Right)
             {
                 CharacterRight.gameObject.SetActive(true);
-                CharacterRight.sprite = dialogueSO.characterSprite;
+                CharacterRight.sprite = dialogueSO.CharacterSprite;
             }
-            else if (dialogueSO.pos == POSITION.MIDDLE)
+            else if (dialogueSO.Pos == Position.Middle)
             {
                 CharacterMiddle.gameObject.SetActive(true);
-                CharacterMiddle.sprite = dialogueSO.characterSprite;
+                CharacterMiddle.sprite = dialogueSO.CharacterSprite;
             }
         }
     }
 }
+*/

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d73737c4b410458ea16b80b3faa99142, type: 3}
+  m_Name: C_part1
+  m_EditorClassIdentifier: 
+  _indexID: 1
+  _text: "Cela fait d\xE9j\xE0 deux g\xE9n\xE9rations que les \xC9tats crois\xE9s
+    sont install\xE9s en Syrie et en Palestine."

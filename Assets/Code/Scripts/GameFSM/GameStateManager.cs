@@ -1,17 +1,53 @@
-﻿using Code.Scripts.Utils;
+﻿using System;
+using Code.Scripts.SO.Gameplay;
+using Code.Scripts.Utils;
 using UnityEngine;
 
 namespace Code.Scripts.GameFSM
 {
-    public class GameStateManager: MonoBehaviour
+    public class GameStateManager: SingletonMonoBehaviour<GameStateManager>
     {
-        public GameStateInstances States { get; } = new();
+        #region Editor fields
 
+        [Header("State Management")]
+        [SerializeField] private float _gameStateTransitionDelay = 1f;
+
+        [Header("Trial Settings")]
+        [SerializeField] private float _roundDuration = 60f;
+        [SerializeField] private int _playerMaxChoices = 3;
+        [SerializeField] private float _playerChoiceCooldown = 3f;
+        [SerializeField] private int _judgesMaxConviction = 10;
+        [SerializeField] private int _judgesConvincedThreshold = 7;
+
+        [Header("Story settings")]
+        [SerializeField] private float _textWritingSpeed = 1f;
+
+        #endregion
+
+        #region Gameplay/Settings Properties
+
+        public float GameStateTransitionDelay => _gameStateTransitionDelay;
+
+        public float TextWritingSpeed => _textWritingSpeed;
+
+        public int JudgesMaxConviction => _judgesMaxConviction;
+
+        #endregion
+
+        public Action<PlayerChoiceSO> OnPlayerAction;
+
+        public GameStateInstances States { get; } = new();
         private GameBaseState _currentState;
+
+        // ----- //
+
+        private void Awake()
+        {
+            _currentState = States.Intro;
+        }
 
         private void Start()
         {
-            _currentState = States.Intro;
             _currentState.EnterState(this);
         }
 

@@ -1,9 +1,10 @@
+/*
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using Code.Scripts.Entities;
-using Code.Scripts.SO;
-using Code.Scripts.Types;
+using Code.Scripts.SO.Gameplay;
+using Code.Scripts.Types.Gameplay;
 using Code.Scripts.UI;
 using Code.Scripts.Utils;
 using UnityEngine;
@@ -67,7 +68,7 @@ namespace Code.Scripts.Singleton
 
         private void Update()
         {
-            _gameTimer.Tick();
+            //_gameTimer.Tick();
         }
 
         // ----- //
@@ -177,3 +178,4 @@ namespace Code.Scripts.Singleton
 
     }
 }
+*/
