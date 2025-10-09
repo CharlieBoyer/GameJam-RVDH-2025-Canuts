@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _left: 0
   _center: 0
-  _right: 0
-  _subsets: []
+  _right: 2
+  _subsets:
+  - _talker: 2
+    _emotion: 0
+    _text: "Tu te crois pertinent avec ta vaine rh\xE9torique, tu te rendras vite
+      compte que les liens de vassalit\xE9 importent plus que la justice."

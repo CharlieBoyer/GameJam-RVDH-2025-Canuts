@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: 05a_part7
   m_EditorClassIdentifier: 
   _left: 0
-  _center: 0
+  _center: 3
   _right: 0
-  _subsets: []
+  _subsets:
+  - _talker: 3
+    _emotion: 5
+    _text: "On m'a dit que tu \xE9tais un grand chevalier et je vois ici que c'est
+      vrai !"

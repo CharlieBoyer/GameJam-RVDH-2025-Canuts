@@ -13,15 +13,9 @@ MonoBehaviour:
   m_Name: 01_part1
   m_EditorClassIdentifier: 
   _left: 1
-  _center: 2
+  _center: 0
   _right: 0
   _subsets:
   - _talker: 1
     _emotion: 0
-    _text: 'Test: Part 1 - Subset 0'
-  - _talker: 2
-    _emotion: 0
-    _text: 'Test: Part 1 - Subset 1 (Double character)'
-  - _talker: 1
-    _emotion: 0
-    _text: 'Test: Part 1 - Subset 2'
+    _text: Je remercie le Roi Foulques de me recevoir en ce jour.

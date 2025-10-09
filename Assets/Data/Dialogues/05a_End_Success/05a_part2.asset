@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: 05a_part2
   m_EditorClassIdentifier: 
   _left: 0
-  _center: 0
+  _center: 3
   _right: 0
-  _subsets: []
+  _subsets:
+  - _talker: 3
+    _emotion: 0
+    _text: "Seul le seigneur Ous\xE2ma a la possibilit\xE9 de baisser cette somme."

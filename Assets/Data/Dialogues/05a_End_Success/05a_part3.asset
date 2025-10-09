@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _left: 0
   _center: 0
-  _right: 0
-  _subsets: []
+  _right: 2
+  _subsets:
+  - _talker: 2
+    _emotion: 4
+    _text: "Piti\xE9 seigneur Ous\xE2ma, cette somme je ne l'ai pas ! Sois grand
+      et g\xE9n\xE9reux et accorde-moi ta piti\xE9 !"

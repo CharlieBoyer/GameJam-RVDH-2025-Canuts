@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _left: 0
   _center: 0
-  _right: 0
-  _subsets: []
+  _right: 2
+  _subsets:
+  - _talker: 2
+    _emotion: 2
+    _text: "Chien ! Que Dieu soit t\xE9moin, je ne donnerai pas un sou de compensation
+      \xE0 ce sarrazin."

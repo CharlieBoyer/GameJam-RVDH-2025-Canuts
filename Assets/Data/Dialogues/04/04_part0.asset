@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _left: 0
   _center: 0
-  _right: 0
-  _subsets: []
+  _right: 2
+  _subsets:
+  - _talker: 2
+    _emotion: 2
+    _text: "Vil sarrazin, que viens-tu m'\xE9corcher les oreilles avec tes viles
+      et vaines plaintes !"
