@@ -38,9 +38,7 @@ namespace Code.Scripts.GameFSM.States
             _introCanvas.OnIntroCanvasClick += ShowNextContextSentence;
         }
 
-        public override void UpdateState()
-        {
-        }
+        public override void UpdateState() {}
 
         public override void ExitState()
         {

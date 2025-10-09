@@ -15,7 +15,7 @@ MonoBehaviour:
   m_DefaultGroup: 05a62305616b6e34799baff1557e5d3e
   m_currentHash:
     serializedVersion: 2
-    Hash: 00000000000000000000000000000000
+    Hash: c1f7052f113a53dc62df45b1be0ed7d4
   m_OptimizeCatalogSize: 0
   m_BuildRemoteCatalog: 0
   m_CatalogRequestsTimeout: 0
@@ -61,6 +61,9 @@ MonoBehaviour:
   m_overridePlayerVersion: '[UnityEditor.PlayerSettings.bundleVersion]'
   m_GroupAssets:
   - {fileID: 11400000, guid: 58e59a5e9fb8ea04f8bde5de3652a78b, type: 2}
+  - {fileID: 11400000, guid: 6b1da44f8e81296439f8fdc0172b3d0c, type: 2}
+  - {fileID: 11400000, guid: 98b8903783f49904fbb1cb71f31a0f11, type: 2}
+  - {fileID: 11400000, guid: 4b511ecf01bad8e4abbd5242fb65662c, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
     m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles
@@ -104,6 +107,7 @@ MonoBehaviour:
     - Choices
     - Dialogues
     - Sequences
+    - Characters
   m_SchemaTemplates: []
   m_GroupTemplateObjects:
   - {fileID: 11400000, guid: 2e63b639b73ca7644bc194eea2671550, type: 2}

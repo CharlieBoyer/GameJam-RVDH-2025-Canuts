@@ -1,7 +1,7 @@
 ﻿using System;
 using Code.Scripts.Singleton;
-using Code.Scripts.SO;
-using Code.Scripts.Types;
+using Code.Scripts.SO.Gameplay;
+using Code.Scripts.Types.Gameplay;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -67,7 +67,7 @@ namespace Code.Scripts.Entities
         private void OnChoiceClick()
         {
             // TODO: On button choice click
-            GameManager.Instance?.OnPlayerAction.Invoke(_actionSO);
+            // GameManager.Instance?.OnPlayerAction.Invoke(_actionSO);
         }
     }
 }

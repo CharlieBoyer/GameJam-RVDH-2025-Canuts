@@ -1,5 +1,5 @@
 ﻿using System;
-using Code.Scripts.SO;
+using Code.Scripts.SO.Gameplay;
 using Code.Scripts.Utils;
 using UnityEngine;
 
@@ -8,6 +8,9 @@ namespace Code.Scripts.GameFSM
     public class GameStateManager: SingletonMonoBehaviour<GameStateManager>
     {
         #region Editor fields
+
+        [Header("State Management")]
+        [SerializeField] private float _gameStateTransitionDelay = 1f;
 
         [Header("Trial Settings")]
         [SerializeField] private float _roundDuration = 60f;
@@ -23,6 +26,8 @@ namespace Code.Scripts.GameFSM
 
         #region Gameplay/Settings Properties
 
+        public float GameStateTransitionDelay => _gameStateTransitionDelay;
+
         public float TextWritingSpeed => _textWritingSpeed;
 
         public int JudgesMaxConviction => _judgesMaxConviction;
@@ -36,9 +41,13 @@ namespace Code.Scripts.GameFSM
 
         // ----- //
 
-        private void Start()
+        private void Awake()
         {
             _currentState = States.Intro;
+        }
+
+        private void Start()
+        {
             _currentState.EnterState(this);
         }
 

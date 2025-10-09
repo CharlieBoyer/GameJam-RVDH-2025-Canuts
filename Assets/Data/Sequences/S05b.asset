@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7c1e2813e71f14ab2c9fafda6ea325, type: 3}
   m_Name: S05b
   m_EditorClassIdentifier: 
-  _dialogues:
+  _parts:
   - {fileID: 11400000, guid: 6f9187edcb6c6cd428c0e38ef7211c79, type: 2}
   - {fileID: 11400000, guid: bdaff04d70ed2de47a56b6f79d4f6526, type: 2}

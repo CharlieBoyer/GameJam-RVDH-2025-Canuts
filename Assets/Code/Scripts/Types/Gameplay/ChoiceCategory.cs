@@ -1,4 +1,4 @@
-﻿namespace Code.Scripts.Types
+﻿namespace Code.Scripts.Types.Gameplay
 {
     public enum PlayerChoiceCategory
     {

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d7c1e2813e71f14ab2c9fafda6ea325, type: 3}
   m_Name: S03
   m_EditorClassIdentifier: 
-  _dialogues:
+  _parts:
   - {fileID: 11400000, guid: 1146525ce1eb72f47847b12220629576, type: 2}
   - {fileID: 11400000, guid: bd868a7a8c21b4d4e835308d382c14d9, type: 2}
   - {fileID: 11400000, guid: 28438e2760149274fb123507661f9486, type: 2}

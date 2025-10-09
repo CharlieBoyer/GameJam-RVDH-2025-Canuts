@@ -1,7 +1,7 @@
-﻿using Code.Scripts.Types;
+﻿using Code.Scripts.Types.Gameplay;
 using UnityEngine;
 
-namespace Code.Scripts.SO
+namespace Code.Scripts.SO.Gameplay
 {
     [CreateAssetMenu(fileName = "New PlayerChoice", menuName = "SO/Player Choice", order = 3)]
     public class PlayerChoiceSO: ScriptableObject

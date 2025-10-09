@@ -2,11 +2,11 @@ using System;
 using Code.Scripts.Types;
 using UnityEngine;
 
-namespace Code.Scripts.SO
+namespace Code.Scripts.SO.Dialogues
 {
     [CreateAssetMenu(fileName = "New PlayerChoice", menuName = "SO/Dialogue", order = 1)]
     [Serializable]
-    public class DialogueSO : ScriptableObject
+    public class DialogueSO_Old : ScriptableObject
     {
         public string CharacterName;
 

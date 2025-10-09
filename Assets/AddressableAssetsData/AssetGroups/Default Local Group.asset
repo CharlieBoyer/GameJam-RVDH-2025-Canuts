@@ -15,131 +15,59 @@ MonoBehaviour:
   m_GroupName: Default Local Group
   m_GUID: 05a62305616b6e34799baff1557e5d3e
   m_SerializeEntries:
-  - m_GUID: 153c9e8260ac5054c937e9415ce36441
-    m_Address: Assets/Data/Sequences/S04.asset
+  - m_GUID: 38e7612a2b9d32440bb9ca4696c20752
+    m_Address: PayenLeBouteiller
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Sequences
+    - Characters
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1a7fdf7e0560dfa499835042cff4e202
-    m_Address: Assets/Data/Choices/Attack_A.asset
+  - m_GUID: 3a9118153b084464383ad8f85025fb56
+    m_Address: Renier
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Choices
+    - Characters
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1bfdba452a02d4e4e8604825bb8ef372
-    m_Address: Assets/Data/Choices/Dishonor_B.asset
+  - m_GUID: 4290008b5a79bbf42b5e54fdfeb6c2e7
+    m_Address: ConnetableGuillaumeDeBures
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Choices
+    - Characters
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 266cb5f9b0f91624984050e19d6fb980
-    m_Address: Assets/Data/Context/C_part3.asset
+  - m_GUID: 457a958a92e6ded43afcc9c41c7bdaf7
+    m_Address: GautierGranier
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Context
+    - Characters
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3d1c53090807a5e439b3525ee1e6eb27
-    m_Address: Assets/Data/Sequences/S02.asset
+  - m_GUID: 52133cb3dc43d91489c22eed04d2b931
+    m_Address: SenechalAnscherius
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Sequences
+    - Characters
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4b77d574535e20e4d85080f9562bc1cf
-    m_Address: Assets/Data/Choices/Injustice_B.asset
+  - m_GUID: 6115aed853057af478dac43fb228913c
+    m_Address: Ousama
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Choices
+    - Characters
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4d0234cb6acce7f41bd16a7a518f99b3
-    m_Address: Assets/Data/Choices/Threat_B.asset
+  - m_GUID: 9617c08150ff50341ba51583c5979d26
+    m_Address: GeraudGranier
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Choices
+    - Characters
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 8084a2e5625eced4dbf8e35cf2db39a7
-    m_Address: Assets/Data/Context/C_part0.asset
+  - m_GUID: b42ac252977d5aa4fa67db455fdb0c3a
+    m_Address: MarechalSadon
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Context
+    - Characters
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 928ce4dfd0d80e242bbccf55bf163b34
-    m_Address: Assets/Data/Sequences/S05b.asset
+  - m_GUID: fd1a9deb6814c45448c66c2cd42c636d
+    m_Address: Foulques
     m_ReadOnly: 0
     m_SerializedLabels:
-    - Sequences
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 98ea51bd002e9164fb15f6a8a90494aa
-    m_Address: Assets/Data/Sequences/S05a.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Sequences
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9add93b23a6b6ad4399df232814968a8
-    m_Address: Assets/Data/Sequences/S01.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Sequences
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9ea08827b8ba61f4cbc7e626dd27c18d
-    m_Address: Assets/Data/Context/C_part2.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Context
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9ebb68510e6795646823801b891f742e
-    m_Address: Assets/Data/Choices/Diplomacy_B.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Choices
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: a7362ff126a54474f84f99584455d2a4
-    m_Address: Assets/Data/Choices/Dishonor_A.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Choices
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b74d72f8320999a45bea79605f2a1cbf
-    m_Address: Assets/Data/Context/C_part4.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Context
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: bdd40eb6981447440ad104862c54bf37
-    m_Address: Assets/Data/Choices/Attack_B.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Choices
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: c2aacddbeac17f142a62444408736872
-    m_Address: Assets/Data/Choices/Threat_A.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Choices
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e7414e95eb7410a4f8dfe51a64e181c8
-    m_Address: Assets/Data/Choices/Diplomacy_A.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Choices
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: ea6c2e206e7f3dd43a9f0d6e0f1a3ac2
-    m_Address: Assets/Data/Sequences/S03.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Sequences
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f8922253910f55148b4d6cd3b2a3f694
-    m_Address: Assets/Data/Context/C_part1.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Context
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fb2849e8000610d41adf7f8810f96823
-    m_Address: Assets/Data/Choices/Injustice_A.asset
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Choices
+    - Characters
     FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fe5171c427ba4f44ea0872a987dba09d, type: 2}

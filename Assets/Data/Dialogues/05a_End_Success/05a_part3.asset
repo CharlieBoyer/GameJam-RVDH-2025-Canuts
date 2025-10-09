@@ -9,12 +9,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85d464b39230d8a43bb791acb21909a5, type: 3}
+  m_Script: {fileID: 11500000, guid: 0c4b48225cb44388839b7dcbf6ebb465, type: 3}
   m_Name: 05a_part3
   m_EditorClassIdentifier: 
-  characterName: Renier de Banyas
-  dialogueSentences:
-  - "Piti\xE9 seigneur Ous\xE2ma, cette somme je ne l'ai pas ! Sois grand et g\xE9n\xE9reux
-    et accorde-moi ta piti\xE9 !"
-  pos: 1
-  characterSprite: {fileID: 21300000, guid: 05251abb9d433334abb1e13dc04d851a, type: 3}
+  _left: 0
+  _center: 0
+  _right: 0
+  _subsets: []

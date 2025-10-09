@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Code.Scripts.Types
+namespace Code.Scripts.Types.Gameplay
 {
     [Flags]
     public enum JudgeRef

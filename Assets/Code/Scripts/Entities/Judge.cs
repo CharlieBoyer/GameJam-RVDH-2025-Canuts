@@ -1,7 +1,7 @@
 ﻿using System;
 using Code.Scripts.Singleton;
-using Code.Scripts.SO;
-using Code.Scripts.Types;
+using Code.Scripts.SO.Gameplay;
+using Code.Scripts.Types.Gameplay;
 using Code.Scripts.Utils;
 using DG.Tweening;
 using TMPro;
@@ -38,12 +38,14 @@ namespace Code.Scripts.Entities
 
         private void OnEnable()
         {
-            GameManager.Instance.OnPlayerAction += ResolveDefenseStatement;
+            // TODO:
+            //GameManager.Instance.OnPlayerAction += ResolveDefenseStatement;
         }
 
         private void OnDisable()
         {
-            GameManager.Instance.OnPlayerAction -= ResolveDefenseStatement;
+            // TODO:
+            //GameManager.Instance.OnPlayerAction -= ResolveDefenseStatement;
         }
 
         // ----- //
@@ -63,7 +65,7 @@ namespace Code.Scripts.Entities
             _nameBox.text = _refID.ToString().AddSpacesToEnum();
 
             _convictionGauge.wholeNumbers = true;
-            _convictionGauge.maxValue = GameManager.Instance.JudgesMaxConviction;
+            // TODO: _convictionGauge.maxValue = GameManager.Instance.JudgesMaxConviction;
             _convictionGauge.value = 0;
         }
 
@@ -99,7 +101,7 @@ namespace Code.Scripts.Entities
 
             Conviction += totalConvictionPoints;
 
-            Debug.Log($"Judge {_refID}: + ({totalConvictionPoints}) → {Conviction}/{GameManager.Instance.JudgesMaxConviction}");
+            // Debug.Log($"Judge {_refID}: + ({totalConvictionPoints}) → {Conviction}/{GameManager.Instance.JudgesMaxConviction}");
         }
     }
 }

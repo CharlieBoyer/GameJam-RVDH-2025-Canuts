@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Code.Scripts.Types
+namespace Code.Scripts.Types.Gameplay
 {
     [Serializable]
     public class Sensibilities
