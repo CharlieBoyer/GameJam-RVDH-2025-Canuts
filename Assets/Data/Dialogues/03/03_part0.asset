@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _left: 0
   _center: 0
-  _right: 0
-  _subsets: []
+  _right: 2
+  _subsets:
+  - _talker: 2
+    _emotion: 0
+    _text: "Que sont quelques agneaux pour ton ma\xEEtre si puissant."

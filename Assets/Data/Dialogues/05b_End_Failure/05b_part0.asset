@@ -13,6 +13,15 @@ MonoBehaviour:
   m_Name: 05b_part0
   m_EditorClassIdentifier: 
   _left: 0
-  _center: 0
+  _center: 3
   _right: 0
-  _subsets: []
+  _subsets:
+  - _talker: 3
+    _emotion: 0
+    _text: "La haute cour a tranch\xE9 et t'a donn\xE9 tort, Ous\xE2ma !"
+  - _talker: 3
+    _emotion: 0
+    _text: Renier ne paiera pas pour la perte des agneaux !
+  - _talker: 3
+    _emotion: 0
+    _text: "J'en suis d\xE9sol\xE9 car on m'a dit que tu \xE9tais un grand chevalier."

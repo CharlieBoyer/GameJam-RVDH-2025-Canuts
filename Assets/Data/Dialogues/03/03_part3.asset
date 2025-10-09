@@ -15,4 +15,8 @@ MonoBehaviour:
   _left: 0
   _center: 0
   _right: 0
-  _subsets: []
+  _subsets:
+  - _talker: 1
+    _emotion: 2
+    _text: "En manquant de respect \xE0 mon Prince, c'est \xE0 Damas tout entier
+      que tu manques de respect, tu verras que Dieu nous donnera raison."

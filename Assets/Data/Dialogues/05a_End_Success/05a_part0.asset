@@ -13,6 +13,17 @@ MonoBehaviour:
   m_Name: 05a_part0
   m_EditorClassIdentifier: 
   _left: 0
-  _center: 0
+  _center: 3
   _right: 0
-  _subsets: []
+  _subsets:
+  - _talker: 3
+    _emotion: 0
+    _text: "La haute cour \xE9tant \xE0 \xE9galit\xE9 \xE0 3 votes pour coupables
+      et 3 votes contre, je serais donc moi-m\xEAme l'ultime juge de cette affaire."
+  - _talker: 3
+    _emotion: 0
+    _text: Je juge que tu es COUPABLE Renier !
+  - _talker: 3
+    _emotion: 0
+    _text: "Tu ne peux aller contre et tu dois payer le seigneur Ous\xE2ma 800 dinars
+      d'or pour la perte des agneaux."

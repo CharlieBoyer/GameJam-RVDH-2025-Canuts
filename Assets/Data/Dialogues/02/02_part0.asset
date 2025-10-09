@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _left: 0
   _center: 0
-  _right: 0
-  _subsets: []
+  _right: 2
+  _subsets:
+  - _talker: 2
+    _emotion: 2
+    _text: "Nul agneau n'a \xE9t\xE9 vol\xE9 sur les terres de Damas. Ces accusations
+      sont infond\xE9es !"

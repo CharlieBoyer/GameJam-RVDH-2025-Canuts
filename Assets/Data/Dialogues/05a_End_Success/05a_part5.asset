@@ -13,6 +13,9 @@ MonoBehaviour:
   m_Name: 05a_part5
   m_EditorClassIdentifier: 
   _left: 0
-  _center: 0
+  _center: 3
   _right: 0
-  _subsets: []
+  _subsets:
+  - _talker: 3
+    _emotion: 5
+    _text: "Ousama, par ma foy j'\xE9prouve ici une grande joie !"

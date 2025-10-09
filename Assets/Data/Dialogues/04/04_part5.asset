@@ -12,7 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c4b48225cb44388839b7dcbf6ebb465, type: 3}
   m_Name: 04_part5
   m_EditorClassIdentifier: 
-  _left: 0
+  _left: 1
   _center: 0
   _right: 0
-  _subsets: []
+  _subsets:
+  - _talker: 1
+    _emotion: 0
+    _text: Nous verrons cela...

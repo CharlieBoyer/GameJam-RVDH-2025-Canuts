@@ -306,11 +306,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _mixerSystem: {fileID: 24100000, guid: 3972e3963fdab5b499daa8dfd481a3e1, type: 2}
   ClipsIndex:
-    <UIButtonSelected>k__BackingField: {fileID: 0}
-    <UIButtonHoverEnter>k__BackingField: {fileID: 0}
-    <UIButtonHoverExit>k__BackingField: {fileID: 0}
-    <MenuMusic>k__BackingField: {fileID: 0}
+    <Attack>k__BackingField: {fileID: 8300000, guid: 95b509d8a6ff0874ca7d7b0e47f8c275, type: 3}
+    <Diplomacy>k__BackingField: {fileID: 8300000, guid: 2fcde466896c9bc4c8b0a7665f562f4c, type: 3}
+    <Dishonor>k__BackingField: {fileID: 8300000, guid: 14a446c56f24e0f459d7c28b9b8e743a, type: 3}
+    <Injustice>k__BackingField: {fileID: 8300000, guid: f5b22c22bfe135346ba28a98a93fad7f, type: 3}
+    <Threat>k__BackingField: {fileID: 8300000, guid: 0d20d16e28ee19d419bd452ec6147bc2, type: 3}
+    <MenuMusic>k__BackingField: {fileID: 8300000, guid: 915d5be4824dbaf4b91bf1258eadb1a4, type: 3}
     <GameMusic>k__BackingField: {fileID: 8300000, guid: 8eb904239d08af84ca9016ac1988bdda, type: 3}
+    <GameOver>k__BackingField: {fileID: 8300000, guid: b804bf4d64c5817459363a2ba8192f9f, type: 3}
+    <GameWon>k__BackingField: {fileID: 8300000, guid: 14763d1ad584b8a45a38670e1c808333, type: 3}
+    <PleadingEnd>k__BackingField: {fileID: 8300000, guid: 7c96f32a99764cf43b0c276354c51cda, type: 3}
+    <PleadingTimer>k__BackingField: {fileID: 8300000, guid: a811e5ea28f29944dbbc293bd82617c1, type: 3}
+    <PleadingStart>k__BackingField: {fileID: 8300000, guid: 47ec7a2d1641fca419bdcec44c72a024, type: 3}
+    <PassText>k__BackingField: {fileID: 8300000, guid: 6bf1eaca6de070c45a0e394cb621d3c4, type: 3}
+    <OusamaVoice>k__BackingField: {fileID: 8300000, guid: fc9ec8062c0166c40b090be8a8d59821, type: 3}
+    <RenierVoice>k__BackingField: {fileID: 8300000, guid: 6deae4f7984d45d4ca88c0d9d5177aa3, type: 3}
+    <UIHover>k__BackingField: {fileID: 8300000, guid: 93b49d26c918c114283f684bfe30f7f8, type: 3}
+    <UIReturn>k__BackingField: {fileID: 8300000, guid: 28fa7b5d28f7cce4194dbce4c8907c3d, type: 3}
+    <UIValidation>k__BackingField: {fileID: 8300000, guid: dbc94fbfe95a443449ed9553859a1cd0, type: 3}
   _initialMasterVolume: 1
   _initialAmbientVolume: 1
   _initialSFXVolume: 1
