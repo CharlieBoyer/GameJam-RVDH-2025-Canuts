@@ -332,6 +332,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 661204672173029109, guid: d5a56e9ba8af9254b94da2aae0a6f4e9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 309ebc24b6ee9f946b42042b090d6a1d, type: 3}
     - target: {fileID: 1669444265355005862, guid: d5a56e9ba8af9254b94da2aae0a6f4e9, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -412,14 +416,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3256517633333711140, guid: d5a56e9ba8af9254b94da2aae0a6f4e9, type: 3}
-      propertyPath: _nextButtonOffsetDistance
-      value: 5
-      objectReference: {fileID: 0}
+    - target: {fileID: 2032850644083918705, guid: d5a56e9ba8af9254b94da2aae0a6f4e9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 309ebc24b6ee9f946b42042b090d6a1d, type: 3}
     - target: {fileID: 5253471861874597398, guid: d5a56e9ba8af9254b94da2aae0a6f4e9, type: 3}
       propertyPath: m_Alpha
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6448294112677680990, guid: d5a56e9ba8af9254b94da2aae0a6f4e9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 309ebc24b6ee9f946b42042b090d6a1d, type: 3}
     - target: {fileID: 8901712484310833277, guid: d5a56e9ba8af9254b94da2aae0a6f4e9, type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
@@ -529,7 +537,7 @@ MonoBehaviour:
   _playerChoiceCooldown: 3
   _judgesMaxConviction: 10
   _judgesConvincedThreshold: 7
-  _textWritingSpeed: 10
+  _textWritingSpeed: 20
 --- !u!4 &469381072
 Transform:
   m_ObjectHideFlags: 0
@@ -1963,8 +1971,8 @@ MonoBehaviour:
   _textCanvasGroup: {fileID: 1190330197}
   _textBox: {fileID: 1190330195}
   _clickArea: {fileID: 923767245}
-  _textFadeDuration: 1.5
-  _screenFadeOutDuration: 3
+  _textFadeDuration: 1
+  _screenFadeOutDuration: 2
 --- !u!224 &1433723802
 RectTransform:
   m_ObjectHideFlags: 0

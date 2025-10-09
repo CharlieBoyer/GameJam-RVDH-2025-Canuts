@@ -17,6 +17,7 @@ namespace Code.Scripts.UI
         [SerializeField] private Button _nextButton;
 
         [Header("Character Sprites")]
+        [SerializeField] private Sprite _defaultTransparent;
         [SerializeField] private Image _leftSlot;
         [SerializeField] private Image _centerSlot;
         [SerializeField] private Image _rightSlot;
@@ -40,13 +41,16 @@ namespace Code.Scripts.UI
         private (Image slot, int index) _characterRight;
 
         private readonly Color _transparent = new(1,1,1,0f);
-        private readonly Color _inactiveColor = new(1,1,1,0.5f);
+        private readonly Color _inactiveColor = new(.3f,.3f,.3f,1f);
         private readonly Color _activeColor = new(1,1,1,1f);
+
+        private RectTransform _nextButtonRect;
 
         // ----- //
 
         private void Awake()
         {
+            _nextButtonRect = _nextButton.GetComponent<RectTransform>();
             _characterLeft   = new ValueTuple<Image, int>(_leftSlot, 1);
             _characterCenter = new ValueTuple<Image, int>(_centerSlot, 2);
             _characterRight  = new ValueTuple<Image, int>(_rightSlot, 3);
@@ -69,7 +73,7 @@ namespace Code.Scripts.UI
                 else
                 {
                     ShowNextButton(false);
-                    OnNextDialogueClicked.Invoke();
+                    OnNextDialogueClicked?.Invoke();
                 }
             });
         }
@@ -152,7 +156,7 @@ namespace Code.Scripts.UI
                 character.slot.DOColor(_transparent, _characterSmoothDuration).OnComplete(() =>
                 {
                     character.slot.sprite = newSprite;
-                    character.slot.DOColor(_inactiveColor, _characterSmoothDuration);
+                    character.slot.DOColor(_activeColor, _characterSmoothDuration);
                 });
             }
         }
@@ -171,7 +175,7 @@ namespace Code.Scripts.UI
 
         private bool IsHighlighted(Image slot)
         {
-            return Mathf.Approximately(slot.color.a, 1f);
+            return slot.color == _activeColor;
         }
 
         private void StartTyping(string text)
@@ -199,7 +203,7 @@ namespace Code.Scripts.UI
 
             if (enable)
             {
-                _nextButton.transform.DOLocalMoveY(_nextButtonOffsetDistance, _nextButtonOffsetFrequency)
+                _nextButtonRect.DOAnchorPosY(_nextButtonOffsetDistance, _nextButtonOffsetFrequency)
                     .SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
             }
             else
@@ -216,9 +220,9 @@ namespace Code.Scripts.UI
             _dialogueTextBox.text = string.Empty;
             _dialogueTextBox.maxVisibleCharacters = 0;
             ShowNextButton(false);
-            _leftSlot.sprite = null;
-            _centerSlot.sprite = null;
-            _rightSlot.sprite = null;
+            _leftSlot.sprite = _defaultTransparent;
+            _centerSlot.sprite = _defaultTransparent;
+            _rightSlot.sprite = _defaultTransparent;
         }
     }
 }

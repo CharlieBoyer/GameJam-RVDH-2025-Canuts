@@ -53,13 +53,15 @@ namespace Code.Scripts.GameFSM.States
         {
             if (!_isInit)
                 InitState(context);
+
+            _canvas.OnNextDialogueClicked += ManageActivePart;
         }
 
         public override void UpdateState() {}
 
         public override void ExitState()
         {
-            throw new System.NotImplementedException();
+            _canvas.OnNextDialogueClicked -= ManageActivePart;
         }
 
         // ----- //
@@ -89,11 +91,9 @@ namespace Code.Scripts.GameFSM.States
             _canvas.Talk(_activeSubset.Talker, _activeSubset.Text);
             _canvas.UpdateActiveTalker(GetPositionIndex(_activePart, _activeSubset), _activeSubset.Sprite);
 
-            if (_subsetIndex < _activePart.Subsets.Count)
-            {
-                _subsetIndex++;
-            }
-            else
+            _subsetIndex++;
+
+            if (_subsetIndex >= _activePart.Subsets.Count)
             {
                 _subsetIndex = 0;
                 _partIndex++;

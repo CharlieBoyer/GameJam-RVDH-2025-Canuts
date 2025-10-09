@@ -997,12 +997,13 @@ MonoBehaviour:
   _characterNameBox: {fileID: 5997921964095108231}
   _dialogueTextBox: {fileID: 7062756614366946972}
   _nextButton: {fileID: 3445529084042240658}
+  _defaultTransparent: {fileID: 21300000, guid: 309ebc24b6ee9f946b42042b090d6a1d, type: 3}
   _leftSlot: {fileID: 661204672173029109}
   _centerSlot: {fileID: 2032850644083918705}
   _rightSlot: {fileID: 6448294112677680990}
-  _rootFadeDuration: 2
-  _characterSmoothDuration: 0.8
-  _nextButtonOffsetDistance: 20
+  _rootFadeDuration: 1
+  _characterSmoothDuration: 0.4
+  _nextButtonOffsetDistance: 10
   _nextButtonOffsetFrequency: 1
 --- !u!223 &7680250815235314803
 Canvas:

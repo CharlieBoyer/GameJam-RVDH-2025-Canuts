@@ -61,7 +61,11 @@ namespace Code.Scripts.UI
             {
                 _textCanvasGroup.DOFade(0, _textFadeDuration);
                 yield return new WaitForSeconds(_textFadeDuration);
-                _screenCanvasGroup.DOFade(0, _screenFadeOutDuration);
+                _screenCanvasGroup.DOFade(0, _screenFadeOutDuration).OnComplete(() =>
+                {
+                    this.gameObject.SetActive(false);
+                });
+
             }
 
             StartCoroutine(AnimationRoutine());
