@@ -69,6 +69,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 43b4a8aa2a3fe1241a4ab499defcfe80, type: 3}
+    - target: {fileID: 2791080068106873364, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6370544398421282314, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.252
@@ -159,6 +163,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 4935151d662836147bd13212ed5f3ff0, type: 3}
+    - target: {fileID: 2791080068106873364, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6370544398421282314, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.253
@@ -355,10 +363,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: P_Game_Judge_A
       objectReference: {fileID: 0}
-    - target: {fileID: 2791080068106873364, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2993d2acd077d1b4081ed0dd2d4b1743, type: 3}
     - target: {fileID: 2791080068106873364, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: m_DrawMode
       value: 0
@@ -559,6 +563,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: eed2c63892e58414e8d3e43cdc83bfa7, type: 3}
+    - target: {fileID: 2791080068106873364, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6370544398421282314, guid: 96beb4f2d75c3e3419f1cd451c223578, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.495

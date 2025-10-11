@@ -1,9 +1,10 @@
-using Code.Scripts.Audio;
+using System.Collections;
 using Code.Scripts.Utils;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace Code.Scripts.Singleton
+namespace Code.Scripts.Audio
 {
     public class AudioManager : SingletonMonoBehaviour<AudioManager>
     {
@@ -11,7 +12,7 @@ namespace Code.Scripts.Singleton
         [SerializeField] private AudioMixer _mixerSystem;
 
         [Space]
-        public AudioClipsIndex ClipsIndex;
+        [SerializeField] private AudioClipsIndex _clipsIndex;
 
         [Header("Initial Mix")]
         [SerializeField] [Range(0, 1)] private float _initialMasterVolume = 0.5f;
@@ -27,9 +28,18 @@ namespace Code.Scripts.Singleton
         [SerializeField] private AudioSource _musicAudioSource;
         [SerializeField] private AudioSource _sfxAudioSource;
 
+        [Header("Interpolation parameters")]
+        [SerializeField] private float _defaultClipTransitionSpeed = 1f;
+
         private static readonly string MasterVolumeParameter = "VolumeMaster";
         private static readonly string AmbientVolumeParameter = "VolumeAmbient";
         private static readonly string SFXVolumeParameter = "VolumeSFX";
+
+        #region Properties
+
+        public static AudioClipsIndex ClipsIndex => Instance._clipsIndex;
+
+        public static float DefaultClipTransitionSpeed => Instance._defaultClipTransitionSpeed;
 
         private float _masterVolume;
         public float MasterVolume {
@@ -95,13 +105,19 @@ namespace Code.Scripts.Singleton
             }
         }
 
+        #endregion
+
+        // ----- //
+
         private void Awake()
         {
-            DontDestroyOnLoad(this.gameObject);
+            // DontDestroyOnLoad(this.gameObject);
             MasterVolume = _initialMasterVolume;
             AmbientVolume = _initialAmbientVolume;
             SFXVolume = _initialSFXVolume;
         }
+
+        // ----- //
 
         /// <summary>
         /// Update the appropriate volume referenced as an exposed mixer parameter
@@ -137,19 +153,65 @@ namespace Code.Scripts.Singleton
             _mixerSystem.SetFloat(mixerParameter, decibels);
         }
 
+        // ----- //
+
         /// <summary>
-        /// Change audio clip of the main music.
+        /// Change the audio to the main clip and play it
         /// </summary>
-        public void PlayMusic()
+        public void PlayMainMusic()
         {
-            _musicAudioSource.clip = ClipsIndex.GameMusic;
+            _musicAudioSource.clip = _clipsIndex.GameMusic;
             _musicAudioSource.Play();
         }
 
-        public void PlaySFX(AudioClip sfx)
+        public void ChangeMusicSmoothed(AudioClip clip, float volumeOverride = -1f, float smoothSpeed = 1f)
         {
-            _sfxAudioSource.PlayOneShot(sfx);
+            IEnumerator ChangeMusicCoroutine(AudioClip targetClip, float targetVolume, float transitionDuration)
+            {
+                float endValue = Mathf.Clamp((targetVolume < 0 ? _musicAudioSource.volume : targetVolume), 0, 1);
+
+                DOTween.To(
+                    () => _musicAudioSource.volume,
+                    x => _musicAudioSource.volume = x,
+                    0, transitionDuration);
+
+                yield return new WaitForSeconds(transitionDuration);
+                _musicAudioSource.Stop();
+                _musicAudioSource.clip = targetClip;
+                _musicAudioSource.Play();
+
+                DOTween.To(
+                    () => _musicAudioSource.volume,
+                    x => _musicAudioSource.volume = x,
+                    endValue, transitionDuration);
+            }
+
+            StartCoroutine(ChangeMusicCoroutine(clip, volumeOverride, smoothSpeed));
         }
 
+        public void StopMusicSmoothed(float smoothSpeed = 1f)
+        {
+            IEnumerator StopMusicCoroutine(float transitionDuration)
+            {
+                DOTween.To(
+                    () => _musicAudioSource.volume,
+                    x => _musicAudioSource.volume = x,
+                    0, transitionDuration);
+
+                yield return new WaitForSeconds(transitionDuration);
+                _musicAudioSource.Stop();
+            }
+
+            StartCoroutine(StopMusicCoroutine(smoothSpeed));
+        }
+
+        public void PlaySFX(AudioClip sfx, float volumeOverride = -1f)
+        {
+            float targetVolume = Mathf.Clamp((volumeOverride < 0 ? _musicAudioSource.volume : volumeOverride), 0, 1);
+
+            _sfxAudioSource.PlayOneShot(sfx, targetVolume);
+        }
+
+        // ----- //
     }
 }

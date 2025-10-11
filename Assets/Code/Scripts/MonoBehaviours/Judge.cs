@@ -1,5 +1,7 @@
 ﻿using System;
-using Code.Scripts.Singleton;
+using System.Collections;
+using Code.Scripts.GameFSM;
+using Code.Scripts.GameFSM.States;
 using Code.Scripts.SO.Gameplay;
 using Code.Scripts.Types.Gameplay;
 using Code.Scripts.Utils;
@@ -8,7 +10,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Code.Scripts.Entities
+namespace Code.Scripts.MonoBehaviours
 {
     public class Judge: MonoBehaviour
     {
@@ -36,17 +38,15 @@ namespace Code.Scripts.Entities
             }
         }
 
-        private void OnEnable()
-        {
-            // TODO:
-            //GameManager.Instance.OnPlayerAction += ResolveDefenseStatement;
-        }
-
-        private void OnDisable()
-        {
-            // TODO:
-            //GameManager.Instance.OnPlayerAction -= ResolveDefenseStatement;
-        }
+        // private void OnEnable()
+        // {
+        //     GameStateTrial.OnPlayerAction += ResolveDefenseStatement;
+        // }
+        //
+        // private void OnDisable()
+        // {
+        //     GameStateTrial.OnPlayerAction -= ResolveDefenseStatement;
+        // }
 
         // ----- //
 
@@ -65,7 +65,7 @@ namespace Code.Scripts.Entities
             _nameBox.text = _refID.ToString().AddSpacesToEnum();
 
             _convictionGauge.wholeNumbers = true;
-            // TODO: _convictionGauge.maxValue = GameManager.Instance.JudgesMaxConviction;
+            _convictionGauge.maxValue = GameStateManager.Instance.JudgesMaxConviction;
             _convictionGauge.value = 0;
         }
 
@@ -100,8 +100,17 @@ namespace Code.Scripts.Entities
             }
 
             Conviction += totalConvictionPoints;
+        }
 
-            // Debug.Log($"Judge {_refID}: + ({totalConvictionPoints}) → {Conviction}/{GameManager.Instance.JudgesMaxConviction}");
+        // ----- //
+
+        public static IEnumerator ResolveAction(PlayerChoiceSO action)
+        {
+            foreach (Judge judge in Instances)
+            {
+                judge.ResolveDefenseStatement(action);
+                yield return null;
+            }
         }
     }
 }

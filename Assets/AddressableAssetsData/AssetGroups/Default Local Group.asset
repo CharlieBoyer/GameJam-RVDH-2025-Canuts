@@ -14,61 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: 05a62305616b6e34799baff1557e5d3e
-  m_SerializeEntries:
-  - m_GUID: 38e7612a2b9d32440bb9ca4696c20752
-    m_Address: PayenLeBouteiller
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Characters
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3a9118153b084464383ad8f85025fb56
-    m_Address: Renier
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Characters
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4290008b5a79bbf42b5e54fdfeb6c2e7
-    m_Address: ConnetableGuillaumeDeBures
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Characters
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 457a958a92e6ded43afcc9c41c7bdaf7
-    m_Address: GautierGranier
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Characters
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 52133cb3dc43d91489c22eed04d2b931
-    m_Address: SenechalAnscherius
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Characters
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6115aed853057af478dac43fb228913c
-    m_Address: Ousama
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Characters
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9617c08150ff50341ba51583c5979d26
-    m_Address: GeraudGranier
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Characters
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b42ac252977d5aa4fa67db455fdb0c3a
-    m_Address: MarechalSadon
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Characters
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fd1a9deb6814c45448c66c2cd42c636d
-    m_Address: Foulques
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Characters
-    FlaggedDuringContentUpdateRestriction: 0
+  m_SerializeEntries: []
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: fe5171c427ba4f44ea0872a987dba09d, type: 2}
   m_SchemaSet:

@@ -2,7 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Code.Scripts.UI
+namespace Code.Scripts.Systems
 {
     public class GameTimer: MonoBehaviour
     {
@@ -11,7 +11,19 @@ namespace Code.Scripts.UI
 
         private float _timer = 0f;
 
+        private bool _isRunning = false;
+
         public Action OnGameTimerEnd;
+
+        // ----- //
+
+        private void Update()
+        {
+            if (_isRunning)
+                Tick();
+        }
+
+        // ----- //
 
         public void Begin(float maxDuration, bool startFull = true)
         {
@@ -27,6 +39,7 @@ namespace Code.Scripts.UI
             }
 
             _timer = maxDuration;
+            _isRunning = true;
         }
 
         public void Tick()
@@ -39,6 +52,7 @@ namespace Code.Scripts.UI
             if (_timer <= 0)
             {
                 OnGameTimerEnd?.Invoke();
+                _isRunning = false;
             }
         }
     }

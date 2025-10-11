@@ -11,6 +11,7 @@ namespace Code.Scripts.GameFSM
 
         [Header("State Management")]
         [SerializeField] private float _gameStateTransitionDelay = 1f;
+        [SerializeField] private float _trialShowdownDurationDuration = 5f;
 
         [Header("Trial Settings")]
         [SerializeField] private float _roundDuration = 60f;
@@ -27,14 +28,17 @@ namespace Code.Scripts.GameFSM
         #region Gameplay/Settings Properties
 
         public float GameStateTransitionDelay => _gameStateTransitionDelay;
+        public float TrialShowdownDuration => _trialShowdownDurationDuration;
 
         public float TextWritingSpeed => _textWritingSpeed;
 
+        public float RoundDuration => _roundDuration;
+        public int PlayerMaxChoices => _playerMaxChoices;
+        public float PlayerChoiceCooldown => _playerChoiceCooldown;
         public int JudgesMaxConviction => _judgesMaxConviction;
+        public int JudgesConvincedThreshold => _judgesConvincedThreshold;
 
         #endregion
-
-        public Action<PlayerChoiceSO> OnPlayerAction;
 
         public GameStateInstances States { get; } = new();
         private GameBaseState _currentState;

@@ -1,13 +1,15 @@
 ﻿using System;
-using Code.Scripts.Singleton;
+using Code.Scripts.GameFSM;
+using Code.Scripts.GameFSM.States;
 using Code.Scripts.SO.Gameplay;
 using Code.Scripts.Types.Gameplay;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Code.Scripts.Entities
+namespace Code.Scripts.MonoBehaviours
 {
+    [RequireComponent(typeof(Button))]
     public class Choice: MonoBehaviour
     {
         private Button _button;
@@ -16,7 +18,7 @@ namespace Code.Scripts.Entities
 
         private void Awake()
         {
-            _button = GetComponentInChildren<Button>();
+            _button = GetComponent<Button>();
             _label = GetComponentInChildren<TMP_Text>();
         }
 
@@ -32,11 +34,18 @@ namespace Code.Scripts.Entities
 
         // ----- ///
 
+        public void PreSetup(PlayerChoiceSO data)
+        {
+            _button = GetComponent<Button>();
+            _label = GetComponentInChildren<TMP_Text>();
+            _actionSO = data;
+        }
+
         public void Setup(PlayerChoiceSO data)
         {
-            ColorBlock colors = _button.colors;
+            PreSetup(data);
 
-            _actionSO = data;
+            ColorBlock colors = _button.colors;
 
             switch (_actionSO.Category)
             {
@@ -66,8 +75,7 @@ namespace Code.Scripts.Entities
 
         private void OnChoiceClick()
         {
-            // TODO: On button choice click
-            // GameManager.Instance?.OnPlayerAction.Invoke(_actionSO);
+            GameStateTrial.OnPlayerAction?.Invoke(_actionSO);
         }
     }
 }

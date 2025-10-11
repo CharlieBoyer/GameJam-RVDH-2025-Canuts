@@ -1,4 +1,5 @@
 ﻿using System;
+using Code.Scripts.Audio;
 using Code.Scripts.GameFSM;
 using Code.Scripts.SO.Dialogues;
 using TMPro;
@@ -63,7 +64,6 @@ namespace Code.Scripts.UI
 
         private void OnEnable()
         {
-            // TODO: Button doesn't seem to work: check if connection/Action is properly set in the GameStateManager
             _nextButton.onClick.AddListener(() =>
             {
                 if (_typewritingTween != null && _typewritingTween.IsPlaying())
@@ -72,7 +72,8 @@ namespace Code.Scripts.UI
                 }
                 else
                 {
-                    ShowNextButton(false);
+                    AudioManager.Instance.PlaySFX(AudioManager.ClipsIndex.UIReturn, 0.7f);
+                    _nextButton.interactable = false;
                     OnNextDialogueClicked?.Invoke();
                 }
             });
@@ -192,7 +193,7 @@ namespace Code.Scripts.UI
                     x => _dialogueTextBox.maxVisibleCharacters = x,
                     text.Length,
                     text.Length / TypeWritingSpeed
-                ).SetEase(Ease.Linear)
+                ).SetEase(Ease.Linear).SetUpdate(UpdateType.Fixed).OnUpdate(() => AudioTypewriter.OnTypewriterSound?.Invoke())
                 .OnKill(() => { _typewritingTween = null; });
         }
 
@@ -203,12 +204,8 @@ namespace Code.Scripts.UI
 
             if (enable)
             {
-                _nextButtonRect.DOAnchorPosY(_nextButtonOffsetDistance, _nextButtonOffsetFrequency)
+                _nextButtonRect.DOAnchorPosY(_nextButtonOffsetDistance, _nextButtonOffsetFrequency).From(new Vector2(0,0))
                     .SetEase(Ease.InOutSine).SetLoops(-1, LoopType.Yoyo);
-            }
-            else
-            {
-                _nextButton.DOKill();
             }
         }
 

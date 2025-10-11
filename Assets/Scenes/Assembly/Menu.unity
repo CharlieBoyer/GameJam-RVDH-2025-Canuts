@@ -239,6 +239,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5845804483827805649, guid: 2b8af55bd0904224ba16a119bd4e8465, type: 3}
+      propertyPath: _volumeOverride
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8270787518245270390, guid: 2b8af55bd0904224ba16a119bd4e8465, type: 3}
       propertyPath: m_text
       value: "Cr\xE9dits"
@@ -1041,6 +1045,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5845804483827805649, guid: 2b8af55bd0904224ba16a119bd4e8465, type: 3}
+      propertyPath: _volumeOverride
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 8270787518245270390, guid: 2b8af55bd0904224ba16a119bd4e8465, type: 3}
       propertyPath: m_text
       value: Quitter
@@ -1522,6 +1530,10 @@ PrefabInstance:
     - target: {fileID: 5666443817497830478, guid: 2b8af55bd0904224ba16a119bd4e8465, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845804483827805649, guid: 2b8af55bd0904224ba16a119bd4e8465, type: 3}
+      propertyPath: _volumeOverride
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8270787518245270390, guid: 2b8af55bd0904224ba16a119bd4e8465, type: 3}
       propertyPath: m_text
@@ -2640,6 +2652,10 @@ PrefabInstance:
     - target: {fileID: 5666443817497830478, guid: 2b8af55bd0904224ba16a119bd4e8465, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5845804483827805649, guid: 2b8af55bd0904224ba16a119bd4e8465, type: 3}
+      propertyPath: _volumeOverride
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 8270787518245270390, guid: 2b8af55bd0904224ba16a119bd4e8465, type: 3}
       propertyPath: m_text

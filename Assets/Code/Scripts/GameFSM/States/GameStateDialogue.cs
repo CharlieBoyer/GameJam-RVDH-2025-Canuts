@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using Code.Scripts.Audio;
 using Code.Scripts.SO.Dialogues;
 using Code.Scripts.Types.Dialogues;
 using Code.Scripts.UI;
@@ -18,7 +19,8 @@ namespace Code.Scripts.GameFSM.States
          *      However, this state might need to communicate with a dedicated UI module (and optionally dialogue settings class).
          */
 
-        private DialogueCanvas _canvas;
+        private IntroCanvas _introCanvas;
+        private DialogueCanvas _dialogueCanvas;
 
         private List<SequenceSO> _sequences;
         private List<DialogueSO> _parts;
@@ -32,19 +34,26 @@ namespace Code.Scripts.GameFSM.States
         private int _partIndex = 0;
         private int _subsetIndex = 0;
 
+        private bool _catchUpNextSequences = false;
+
         // ----- //
 
         private void InitState(GameStateManager context)
         {
             _manager = context;
-            _canvas = Object.FindFirstObjectByType<DialogueCanvas>();
+            _dialogueCanvas = Object.FindFirstObjectByType<DialogueCanvas>();
 
-            if (!_canvas)
+            if (!_dialogueCanvas)
                 throw new Exception("[GameStateDialogue] No DialogueCanvas script-object found in the scene.");
 
             CharacterRef.Init(_manager);
 
-            LoadDialogueAssets(); // Internal callback starts the dialogue system.
+            AddressablesUtils.LoadResources<SequenceSO>("Sequences", _manager, (assets) =>
+            {
+                _sequences = assets;
+                _sequences.Sort((a, b) => string.Compare(a.name, b.name, StringComparison.Ordinal));
+                StartSequence(_sequenceIndex);
+            });
 
             _isInit = true;
         }
@@ -53,15 +62,25 @@ namespace Code.Scripts.GameFSM.States
         {
             if (!_isInit)
                 InitState(context);
+            else
+                Debug.Log("[GameStateDialogue] Already initialized (re-entering state)");
 
-            _canvas.OnNextDialogueClicked += ManageActivePart;
+            _dialogueCanvas.OnNextDialogueClicked += ManageActivePart;
+
+            _dialogueCanvas.gameObject.SetActive(true);
+            PostProcessController.Instance.ToggleDOF(true);
+            _dialogueCanvas.FadeDialogueCanvas(1f, true);
+
+            if (_catchUpNextSequences)
+                ManageActivePart();
         }
 
         public override void UpdateState() {}
 
         public override void ExitState()
         {
-            _canvas.OnNextDialogueClicked -= ManageActivePart;
+            _catchUpNextSequences = true;
+            _dialogueCanvas.OnNextDialogueClicked -= ManageActivePart;
         }
 
         // ----- //
@@ -79,17 +98,22 @@ namespace Code.Scripts.GameFSM.States
 
         private void ManageActivePart()
         {
+            if (_catchUpNextSequences)
+            {
+                // TODO: Use mixer system to switch on EQ/Lowpass effects while in [GameStateDialogue]
+            }
+
             if (_partIndex >= _parts.Count)
             {
-                _sequenceIndex++;
                 EndSequence();
+                return;
             }
 
             _activePart = _activeSequence.Parts[_partIndex];
             _activeSubset = _activePart.Subsets[_subsetIndex];
 
-            _canvas.Talk(_activeSubset.Talker, _activeSubset.Text);
-            _canvas.UpdateActiveTalker(GetPositionIndex(_activePart, _activeSubset), _activeSubset.Sprite);
+            _dialogueCanvas.Talk(_activeSubset.Talker, _activeSubset.Text);
+            _dialogueCanvas.UpdateActiveTalker(GetPositionIndex(_activePart, _activeSubset), _activeSubset.Sprite);
 
             _subsetIndex++;
 
@@ -102,27 +126,32 @@ namespace Code.Scripts.GameFSM.States
 
         private void EndSequence()
         {
+
+
+            _partIndex = 0;
+            _subsetIndex = 0;
+            _sequenceIndex++;
+            _activeSequence = _sequences[_sequenceIndex];
+            _parts = _activeSequence.Parts;
+
+            if (_sequenceIndex >= _sequences.Count - 1)
+            {
+                AudioManager.Instance.PlaySFX(AudioManager.ClipsIndex.GameWon);
+                _introCanvas.ReturnToMenu();
+            }
+
             _manager.StartCoroutine(EndSequenceCoroutine());
         }
 
         private IEnumerator EndSequenceCoroutine()
         {
-            _canvas.FadeDialogueCanvas(0f, true);
+            _dialogueCanvas.FadeDialogueCanvas(0f, true);
+            _dialogueCanvas.gameObject.SetActive(false);
             yield return new WaitForSeconds(_manager.GameStateTransitionDelay);
             _manager.SwitchState(_manager.States.Trial);
         }
 
         // ----- //
-
-        private void LoadDialogueAssets()
-        {
-            AddressablesUtils.LoadResources<SequenceSO>("Sequences", _manager, (assets) =>
-            {
-                _sequences = assets;
-                _sequences.Sort((a, b) => string.Compare(a.name, b.name, StringComparison.Ordinal));
-                StartSequence(_sequenceIndex);
-            });
-        }
 
         private int GetPositionIndex(DialogueSO scene, SubsetSO subsetTalk)
         {

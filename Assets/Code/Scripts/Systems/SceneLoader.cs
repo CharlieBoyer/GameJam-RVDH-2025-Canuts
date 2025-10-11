@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Code.Scripts.Singleton
+namespace Code.Scripts.Systems
 {
     public class SceneLoader : SingletonMonoBehaviour<SceneLoader>
     {

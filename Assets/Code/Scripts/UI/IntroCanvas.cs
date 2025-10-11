@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections;
+using Code.Scripts.Audio;
+using Code.Scripts.Systems;
 using DG.Tweening;
 using TMPro;
 using UnityEngine;
@@ -52,6 +54,7 @@ namespace Code.Scripts.UI
             {
                 _textBox.text = text;
                 _textCanvasGroup.DOFade(1, _textFadeDuration);
+                AudioManager.Instance.PlaySFX(AudioManager.ClipsIndex.UIValidation);
             });
         }
 
@@ -69,6 +72,15 @@ namespace Code.Scripts.UI
             }
 
             StartCoroutine(AnimationRoutine());
+        }
+
+        public void ReturnToMenu()
+        {
+            gameObject.SetActive(true);
+            _screenCanvasGroup.DOFade(1, _screenFadeOutDuration).OnComplete(() =>
+            {
+                SceneLoader.Instance.Load("Menu");
+            });
         }
     }
 }
