@@ -1,5 +1,5 @@
-using System;
-using Code.Scripts.Singleton;
+using Code.Scripts.Audio;
+using Code.Scripts.Systems;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -70,13 +70,14 @@ namespace Code.Scripts.UI
 
         private void Start()
         {
-            AudioManager.Instance.PlayMusic();
+            AudioManager.Instance.ChangeMusicSmoothed(AudioManager.ClipsIndex.MenuMusic, .25f);
         }
 
         // ---------- //
 
         private void Play()
         {
+            AudioManager.Instance.StopMusicSmoothed(0.5f);
             SceneLoader.Instance.Load("Game");
         }
 
@@ -124,6 +125,7 @@ namespace Code.Scripts.UI
 
         private void Exit()
         {
+            AudioManager.Instance.StopMusicSmoothed(0.5f);
             SceneLoader.Instance.Exit();
         }
     }

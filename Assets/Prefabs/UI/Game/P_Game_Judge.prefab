@@ -224,6 +224,7 @@ GameObject:
   - component: {fileID: 6370544398421282314}
   - component: {fileID: 1699990260801444004}
   - component: {fileID: 2791080068106873364}
+  - component: {fileID: 6085938244109734624}
   m_Layer: 0
   m_Name: P_Game_Judge
   m_TagString: Untagged
@@ -268,6 +269,7 @@ MonoBehaviour:
     _diplomacy: 0
   _nameBox: {fileID: 1259031939540282687}
   _convictionGauge: {fileID: 7021364375508764751}
+  _convictionGaugeAnimDuration: 0
 --- !u!212 &2791080068106873364
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -312,7 +314,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -320,9 +322,23 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6085938244109734624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2695054611103486673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 479de633fd1c43b890fccca84240fee1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _target: {fileID: 2791080068106873364}
+  _assetToBind: 7
 --- !u!1 &3765429268764867755
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: PlayerChoices
+  m_EditorClassIdentifier: 
+  m_GroupName: PlayerChoices
+  m_GUID: 274eb47b8b8fb3b41b9a75a5a9e32f71
+  m_SerializeEntries:
+  - m_GUID: 1a7fdf7e0560dfa499835042cff4e202
+    m_Address: Attack_A
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bfdba452a02d4e4e8604825bb8ef372
+    m_Address: Dishonor_B
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b77d574535e20e4d85080f9562bc1cf
+    m_Address: Injustice_B
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d0234cb6acce7f41bd16a7a518f99b3
+    m_Address: Threat_B
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ebb68510e6795646823801b891f742e
+    m_Address: Diplomacy_B
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a7362ff126a54474f84f99584455d2a4
+    m_Address: Dishonor_A
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bdd40eb6981447440ad104862c54bf37
+    m_Address: Attack_B
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2aacddbeac17f142a62444408736872
+    m_Address: Threat_A
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e7414e95eb7410a4f8dfe51a64e181c8
+    m_Address: Diplomacy_A
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fb2849e8000610d41adf7f8810f96823
+    m_Address: Injustice_A
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Choices
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: fe5171c427ba4f44ea0872a987dba09d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 4900202dd9ed44a4c84aa2b4050689d9, type: 2}
+    - {fileID: 11400000, guid: 497afd3e9228e5843815f296fa9ad19d, type: 2}

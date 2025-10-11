@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c4b48225cb44388839b7dcbf6ebb465, type: 3}
+  m_Name: 05a_part0
+  m_EditorClassIdentifier: 
+  _left: 0
+  _center: 3
+  _right: 0
+  _subsets:
+  - _talker: 3
+    _emotion: 0
+    _text: "La haute cour \xE9tant \xE0 \xE9galit\xE9 \xE0 3 votes pour coupables
+      et 3 votes contre, je serais donc moi-m\xEAme l'ultime juge de cette affaire."
+  - _talker: 3
+    _emotion: 0
+    _text: Je juge que tu es COUPABLE Renier !
+  - _talker: 3
+    _emotion: 0
+    _text: "Tu ne peux aller contre et tu dois payer le seigneur Ous\xE2ma 800 dinars
+      d'or pour la perte des agneaux."
