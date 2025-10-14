@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f660185269a8430dbf5817db3d683ddc, type: 3}
+  m_Name: MarechalSadon
+  m_EditorClassIdentifier: 
+  _name: "Mar\xE9chal Sadon"
+  _mainSprite: {fileID: 21300000, guid: 43b4a8aa2a3fe1241a4ab499defcfe80, type: 3}
+  _suspicious: {fileID: 0}
+  _angry: {fileID: 0}
+  _objection: {fileID: 0}
+  _whiner: {fileID: 0}
+  _pleased: {fileID: 0}
