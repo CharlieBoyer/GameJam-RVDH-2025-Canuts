@@ -1,4 +1,4 @@
-[→ Accéder au README français](./readme.fr.md)
+[→ Accéder au README français](./README.fr.md)
 
 ---
 <br/>
