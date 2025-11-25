@@ -10,8 +10,8 @@ You can access all the game created during the event on this link : https://itch
 
 ## Pitch
 
-*Le Safir et le Roi* is a narrative game where you follow a snapshot of *Ousama Ibn Mounqidh*, a syrian ambassador on the XII<sup>th</sup> century.<br/>
-Though a trial like game, *Ousâma* and you will have to choose arguments to plead a theft case with the rulor of Jerusalem, the *King Foulques*, and his court of jurors.<br/>
+*Le Safir et le Roi* is a narrative game where you follow an excerpt of *Ousama Ibn Mounqidh*'s story, a syrian ambassador on the XII<sup>th</sup> century.<br/>
+Through a trial-like game, *Ousâma* and you will have to choose arguments to plead a theft case with the rulor of Jerusalem, the *King Foulques*, and his court of jurors.<br/>
 <br/>
 
 ## Team
